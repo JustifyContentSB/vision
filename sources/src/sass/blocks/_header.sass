@@ -33,9 +33,6 @@
       right: 58px
       display: flex
       justify-content: flex-end
-      transform: translateX(30px)
-      &.animated
-         transform: translateX(0)
       img
          width: 414px
          height: auto
@@ -52,10 +49,7 @@
       z-index: 1
       right: 77px
       bottom: 25px
-      opacity: 0
       transition: opacity .2s ease
-      &.animated
-         opacity: 1
       img
          width: 100%
 
@@ -113,10 +107,8 @@
       &__natalya
          width: 280px
          left: 50%
+         transform: translateX(-50%)
          right: auto
-         transform: translateX(-50%) translateY(0)
-         &.animated
-            transform: translateX(-50%) translateY(0)
       &__logo
          width: 100px
          bottom: 360px

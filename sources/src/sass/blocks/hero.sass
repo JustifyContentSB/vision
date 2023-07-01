@@ -24,9 +24,6 @@
          position: absolute
          left: calc(100% + 20px)
          top: 0
-         transform: translateX(80px)
-         &.animated
-            transform: translateX(0)
       &--patients,
       &--study
          img
@@ -41,9 +38,6 @@
       font-size: 24px
       line-height: 120%
       font-weight: 500
-      transform: translateY(80px)
-      &.animated
-         transform: translateY(0)
    &__lead
       width: 100%
       max-width: 585px
@@ -68,9 +62,6 @@
          position: absolute
          top: -160px
          right: -6px
-         transform: rotate(0) translateX(180px) translateY(0)
-         &.animated
-            transform: rotate(0) translateX(0) translateY(0)
    &__description
       margin-top: 24px
       max-width: 724px
@@ -172,11 +163,8 @@
          &-img
             width: 100%
             max-width: 400px
-            top: 0
-            left: 50%
-            transform: translateX(-50%) translateY(50px)
-            &.animated
-               transform: translateX(-50%) translateY(0)
+            top: -64px
+            left: 26%
       &__lead
          font-size: 16px
       &__cite
@@ -258,8 +246,8 @@
             height: 56px
          &-img
             max-width: 340px
-            top: -15px
-            left: 58%
+            top: -70px
+            left: 14px
       &__cite
          margin-top: 138px
          font-size: 14px

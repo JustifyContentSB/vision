@@ -2043,17 +2043,12 @@ button.link:hover {
 .animation {
   transition: all .3s ease-out
 }
-.fancybox__container {
+.fancybox-container {
   --fancybox-bg: rgba(0, 0, 0, 0.3)
 }
-.fancybox__slide .fancybox__content .f-button.is-close-btn {
-  width: 25px;
-  height: 25px;
-  top: 24px;
-  right: 24px;
-  background: 0 0;
-  border-radius: 0;
-  color: #000
+.fancybox-slide .fancybox-content .fancybox-button {
+  top: 8px;
+  right: 8px
 }
 .menu {
   display: -webkit-flex;
@@ -2257,13 +2252,7 @@ button.link:hover {
   width: 95px;
   position: absolute;
   left: calc(100% + 20px);
-  top: 0;
-  -webkit-transform: translateX(80px);
-  transform: translateX(80px)
-}
-.hero__title-logo.animated {
-  -webkit-transform: translateX(0);
-  transform: translateX(0)
+  top: 0
 }
 .hero__title--patients img,
 .hero__title--study img {
@@ -2278,13 +2267,7 @@ button.link:hover {
   margin-top: -71px;
   font-size: 24px;
   line-height: 120%;
-  font-weight: 500;
-  -webkit-transform: translateY(80px);
-  transform: translateY(80px)
-}
-.hero__cite.animated {
-  -webkit-transform: translateY(0);
-  transform: translateY(0)
+  font-weight: 500
 }
 .hero__lead {
   width: 100%;
@@ -2318,13 +2301,7 @@ button.link:hover {
   width: 100%;
   position: absolute;
   top: -160px;
-  right: -6px;
-  -webkit-transform: rotate(0) translateX(180px) translateY(0);
-  transform: rotate(0) translateX(180px) translateY(0)
-}
-.hero__bottom-img.animated {
-  -webkit-transform: rotate(0) translateX(0) translateY(0);
-  transform: rotate(0) translateX(0) translateY(0)
+  right: -6px
 }
 .hero__description {
   margin-top: 24px;
@@ -2458,14 +2435,8 @@ button.link:hover {
   .hero__bottom-img {
     width: 100%;
     max-width: 400px;
-    top: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(50px);
-    transform: translateX(-50%) translateY(50px)
-  }
-  .hero__bottom-img.animated {
-    -webkit-transform: translateX(-50%) translateY(0);
-    transform: translateX(-50%) translateY(0)
+    top: -64px;
+    left: 26%
   }
   .hero__lead {
     font-size: 16px
@@ -2567,8 +2538,8 @@ button.link:hover {
   }
   .hero__bottom-img {
     max-width: 340px;
-    top: -15px;
-    left: 58%
+    top: -70px;
+    left: 14px
   }
   .hero__cite {
     margin-top: 138px;
@@ -2627,13 +2598,7 @@ button.link:hover {
   display: flex;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px)
-}
-.header__natalya.animated {
-  -webkit-transform: translateX(0);
-  transform: translateX(0)
+  justify-content: flex-end
 }
 .header__natalya img {
   width: 414px;
@@ -2655,11 +2620,7 @@ button.link:hover {
   z-index: 1;
   right: 77px;
   bottom: 25px;
-  opacity: 0;
   transition: opacity .2s ease
-}
-.header__eye.animated {
-  opacity: 1
 }
 .header__eye img {
   width: 100%
@@ -2730,13 +2691,9 @@ button.link:hover {
   .header__natalya {
     width: 280px;
     left: 50%;
-    right: auto;
-    -webkit-transform: translateX(-50%) translateY(0);
-    transform: translateX(-50%) translateY(0)
-  }
-  .header__natalya.animated {
-    -webkit-transform: translateX(-50%) translateY(0);
-    transform: translateX(-50%) translateY(0)
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    right: auto
   }
   .header__logo {
     width: 100px;

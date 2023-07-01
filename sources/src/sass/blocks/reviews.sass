@@ -1,0 +1,64 @@
+.reviews
+   &__item
+      border-radius: 32px
+   &__slide
+      &-info
+         height: 100%
+         padding: 20px 24px
+         border-radius: 32px
+         background: #fff
+         display: flex
+         flex-direction: column
+      &-title
+         margin-bottom: 16px
+         color: var(--accent)
+         font-size: 14px
+         font-weight: 500
+      &-text
+         margin-bottom: 10px
+         padding-bottom: 18px
+         font-size: 12px
+         line-height: 150%
+         position: relative
+         &::after
+            content: "\e904"
+            font-family: icomoon
+            speak: none
+            position: absolute
+            right: -6px
+            bottom: 0
+            color: var(--accent)
+            font-size: 16px
+      &-author
+         margin-top: auto
+         display: flex
+         align-items: center
+      &-photo
+         margin-right: 12px
+         width: 40px
+         min-width: 40px
+         height: 40px
+         border-radius: 50%
+         overflow: hidden
+      &-name
+         font-size: 12px
+         font-weight: 500
+
+.section
+   &--reviews
+      padding-top: 74px
+      margin-bottom: 0
+      padding-bottom: 60px
+      background: var(--sectionBg)
+      border-radius: var(--radius)
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+      border-bottom: 1px solid rgba(#111, 0.1)
+      .section
+         &__title
+            max-width: 502px
+      @media screen and (max-width: $width_mob)
+         padding-top: 26px
+         .section
+            &__header
+               padding-right: 30px

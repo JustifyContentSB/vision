@@ -1,0 +1,59 @@
+// Grid
+$width_xl: 1365px
+$width_lg: 1170px
+$width_md: 991px
+$width_xs: 767px
+$width_mob: 560px
+
+$grid-width: 1170px
+$grid-gutter: 30px
+$grid-columns: 12
+
+:root
+   //colors
+   --primary: #111
+   --accent: #2E80EC
+   --gray: #B0B0B0
+   --sectionBg: #F6F6F6
+   --hover-color: #1E90FF
+   
+   //sizes
+   --radius: 40px
+   --border: 1px solid var(--gray)
+
+   //other
+   --transition-duration: .2s
+
+%hover-line
+   position: relative
+   &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: auto
+      right: 0
+      width: 0
+      height: 1px
+      background: var(--primary)
+      transition: width var(--transition-duration) ease
+   &:hover,
+   &:focus
+      &::after
+         width: 100%
+         left: 0
+         right: auto
+
+%section-lines
+   position: relative
+   &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 308px
+      background: url('../images/elements/lines-01.svg') no-repeat center / cover
+
+@media screen and (max-width: $width_xs)
+   :root
+      --radius: 28px

@@ -1,0 +1,100 @@
+.chapter
+   &__top
+      margin-bottom: 20px
+   &__lead
+      padding: 24px 36px
+      font-size: 28px
+      font-weight: 500
+      background: var(--accent)
+      color: #fff
+      border-radius: 100px
+   &__grid
+      grid-gap: 20px
+   &__link
+      min-height: 234px
+      display: flex
+      position: relative
+      overflow: hidden
+      transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+      &:hover,
+      &:focus
+         color: var(--hover-color)
+   &__text
+      width: 335px
+      position: absolute
+      z-index: 1
+      right: 0
+      top: 0
+      bottom: 0
+      background: rgba(176, 176, 176, 0.08)
+      backdrop-filter: blur(14px)
+      font-size: 24px
+      font-weight: 500
+      display: flex
+      justify-content: center
+      align-items: center
+   &__img
+      display: flex
+      align-items: flex-end
+      img
+         margin-left: 22px
+         transform: translateY(100px)
+         &.animated
+            transform: translateY(0)
+      &-eye
+         width: 400px
+
+   @media screen and (max-width: $width_xl)
+      &__lead
+         padding: 26px 36px
+         font-size: 26px
+      &__img
+         img
+            margin-left: 0
+      &__text
+         width: 310px
+         
+   @media screen and (max-width: $width_lg)
+      &__img
+         width: 350px
+
+   @media screen and (max-width: $width_md)
+      &__lead
+         font-size: 22px
+         text-align: center
+      &__grid
+         grid-template-columns: 1fr
+      &__text
+         width: 50%
+      &__img
+         img
+            transform: translateY(0)
+
+   @media screen and (max-width: $width_xs)
+      &__top
+         margin-bottom: 22px
+      &__lead
+         font-size: 20px
+      &__link
+         height: 212px
+         min-height: auto
+         flex-direction: column
+      &__text
+         width: 100%
+         height: 70px
+         padding-top: 6px
+         font-size: 20px
+         position: static
+      &__img
+         height: calc(100% - 70px)
+         width: auto
+         order: 1
+         position: relative
+         display: flex
+         justify-content: center
+         img
+            width: auto
+            max-width: 220px
+            height: auto
+            position: absolute
+            bottom: 0

@@ -1,0 +1,133 @@
+.header
+   margin-bottom: 100px
+   &--index
+      margin-bottom: 35px
+   &--study
+      margin-bottom: 70px
+   &--patients
+      color: #fff
+   &__inner
+      min-height: 781px
+      padding: 16px
+      background: rgba(lightgray, 50%)
+      border-radius: var(--radius)
+      position: relative
+      &--fon
+         background-image: url('../images/header/index-fon.png')
+         background-repeat: no-repeat
+         background-size: cover
+         background-position: center
+      .header--index &
+         min-height: 662px
+      .header--patients &
+         background: linear-gradient(#A7C3E7, #CAE0FE, #D4E7FF, #B8D7FF)
+         @extend %section-lines
+   &__menu
+      margin-bottom: 40px
+      .header--patients &
+         margin-bottom: 22px
+   &__natalya
+      width: 414px
+      position: absolute
+      bottom: 0
+      right: 58px
+      display: flex
+      justify-content: flex-end
+      transform: translateX(30px)
+      &.animated
+         transform: translateX(0)
+      img
+         width: 414px
+         height: auto
+   &__logo
+      width: 154px
+      position: absolute
+      z-index: 1
+      bottom: 36px
+      left: 36px
+      transition: transform .2s ease
+   &__eye
+      width: 585px
+      position: absolute
+      z-index: 1
+      right: 77px
+      bottom: 25px
+      opacity: 0
+      transition: opacity .2s ease
+      &.animated
+         opacity: 1
+      img
+         width: 100%
+
+   @media screen and (max-width: 1280px)
+      margin-bottom: 62px
+      &--index
+         margin-bottom: 42px
+      &--study
+         margin-bottom: 30px
+      &__natalya
+         width: 340px
+
+   @media screen and (max-width: $width_lg)
+      &__inner
+         min-height: 750px
+         .header--index &
+            min-height: 500px
+      &__natalya
+         width: 300px
+      &__eye
+         width: 460px
+         right: 0
+
+   @media screen and (max-width: $width_md)
+      &--study
+         margin-bottom: 42px
+      &--patients
+         .header
+            &__inner
+               min-height: 700px
+            &__logo
+               display: none
+      &__eye
+         width: 360px
+         opacity: 1
+
+   @media screen and (max-width: $width_xs)
+      &--study
+         .header
+            &__inner
+               padding-bottom: 460px
+      &--patients
+         .header
+            &__inner
+               min-height: 560px
+      &__inner
+         padding: 12px
+      &__menu
+         margin-bottom: 45px
+      &__natalya
+         width: 280px
+         transform: translateX(0) translateY(0)
+      &__logo
+         width: 100px
+         bottom: 360px
+         .header--patients &
+            bottom: 36px
+      &__eye
+         width: 260px
+
+   @media screen and (max-width: 600px)
+      &__natalya
+         width: 240px
+
+   @media screen and (max-width: $width_mob)
+      &__eye
+         width: 200px
+
+   @media screen and (max-width: 400px)
+      &__natalya
+         width: 220px
+
+   @media screen and (max-width: 360px)
+      &__natalya
+         width: 190px

@@ -1,0 +1,147 @@
+.about
+   &__inner
+      padding: 0 38px 0 46px
+      background: linear-gradient(#A7C3E7, #C6D8EF, #A7C3E7, #B8CFED, #CAE0FE, #D4E7FF, #B8D7FF)
+      color: #fff
+      border-radius: var(--radius)
+      overflow: hidden
+      @extend %section-lines
+      &::after
+         background-image: url('../images/elements/lines-02.svg')
+   &__content
+      min-height: 624px
+      padding: 84px 0 107px
+      padding-left: 407px
+      position: relative
+   &__img
+      position: absolute
+      z-index: 5
+      &-01
+         width: 300px
+         left: 0
+         bottom: 0
+         transform: translateY(100%)
+         &.animated
+            transform: translateY(0)
+      &-02
+         width: 202px
+         right: 266px
+         top: 0
+         transform: translateY(-100%)
+         &.animated
+            transform: translateY(0)
+      &-03
+         width: 223px
+         right: 0
+         top: 56%
+         transform: translateY(-50%)
+         opacity: 0
+         &.animated
+            opacity: 1
+   &__info
+      max-width: 420px
+      position: relative
+      z-index: 1
+      & > *:not(:last-child)
+         margin-bottom: 28px
+   &__text
+      padding-right: 20px
+      line-height: 122%
+      & > *:not(:last-child)
+         margin-bottom: 22px
+   &__description
+      padding: 16px 20px
+      color: var(--accent)
+      font-size: 16px
+      line-height: 129%
+      font-weight: 500
+      background: #fff
+      border-radius: 17px
+
+   @media screen and (max-width: 1439px)
+      &__content
+         padding-left: 370px
+
+   @media screen and (max-width: 1400px)
+      &__content
+         padding-left: 320px
+      &__img
+         &-01
+            width: 250px
+         &-02
+            width: 170px
+         &-03
+            width: 202px
+
+   @media screen and (max-width: 1279px)
+      &__img
+         &-02
+            display: none
+         &-03
+            width: 222px
+            top: 50%
+      &__info
+         max-width: 460px
+
+   @media screen and (max-width: $width_lg)
+      &__img
+         &-01
+            width: 200px
+      &__content
+         padding: 50px 0
+         min-height: auto
+         padding-left: 260px
+
+   @media screen and (max-width: 1100px)
+      &__img
+         &-01
+            width: 170px
+         &-03
+            width: 170px
+      &__content
+         padding-left: 220px
+
+   @media screen and (max-width: $width_md)
+      &__img
+         &-03
+            display: none
+      &__content
+         padding-bottom: 100px
+      &__info
+         max-width: 100%
+      &__text
+         padding-right: 4px
+         font-size: 16px
+         line-height: 152%
+         & > *:not(:last-child)
+            margin-bottom: 27px
+
+   @media screen and (max-width: $width_xs)
+      &__content
+         padding-left: 0
+         padding-bottom: 360px
+      &__img
+         &-01
+            width: 195px
+            left: 50%
+            bottom: -64px
+            transform: translateX(-50%) translateY(0)
+            &.animated
+               transform: translateX(-50%) translateY(0)
+
+   @media screen and (max-width: $width_mob)
+      &__inner
+         padding: 0
+      &__content
+         padding: 24px 20px
+         padding-bottom: 360px
+      &__text
+         font-size: 14px
+      &__description
+         padding: 16px
+         font-size: 14px
+         line-height: 158%
+
+.section
+   &--about
+      margin-bottom: 20px

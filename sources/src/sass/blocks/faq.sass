@@ -1,0 +1,92 @@
+.faq
+   --faqItemPadding: 24px
+   &__inner
+      padding: 50px 20px 70px
+   &__item
+      margin-bottom: 16px
+      border-radius: 16px
+      background: #fff
+      &:last-child
+         margin-bottom: 0
+   &__btn
+      padding: 26px 60px 25px var(--faqItemPadding)
+      display: flex
+      font-size: 18px
+      font-weight: 500
+      position: relative
+      transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+      &:hover,
+      &:focus
+         color: var(--hover-color)
+      &::after
+         content: "\e90b"
+         font-family: icomoon
+         speak: none
+         position: absolute
+         right: var(--faqItemPadding)
+         top: 50%
+         transform: translateY(-50%)
+         color: var(--accent)
+         transition: transform var(--transition-duration) ease
+         font-size: 22px
+      &.is-active
+         &::after
+            transform: rotate(45deg) translateY(-50%) translateX(-10px)
+   &__answer
+      padding: var(--faqItemPadding)
+      padding-top: 0
+      display: none
+      line-height: 150%
+
+   @media screen and (max-width: $width_lg)
+      &__inner
+         padding: 20px
+         padding-top: 14px
+      &__item
+         font-size: 14px
+      &__btn
+         font-size: 16px
+
+   @media screen and (max-width: $width_lg)
+      &__inner
+         padding: 20px 16px
+
+   @media screen and (max-width: $width_xs)
+      &__btn
+         &::after
+            font-size: 14px
+            top: 12px
+            transform: none
+         &.is-active
+            &::after
+               transform: rotate(45deg) translateY(0) translateX(-2px)
+               font-size: 16px
+
+   @media screen and (max-width: $width_mob)
+      --faqItemPadding: 16px
+      &__item
+         margin-bottom: 8px
+         font-size: 13px
+         border-radius: 9px
+      &__btn
+         padding: 13px 12px
+         padding-right: 62px
+         line-height: 120%
+
+.section
+   &--faq
+      background: var(--sectionBg)
+      .section
+         &__header
+            margin-bottom: 0
+         &__title
+            max-width: 100%
+            margin-left: 0
+         &__wrapper
+            padding-top: 30px
+
+   @media screen and (max-width: $width_lg)
+      &--faq
+         .section
+            &__wrapper
+               padding-top: 0

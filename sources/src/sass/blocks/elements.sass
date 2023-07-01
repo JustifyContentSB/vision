@@ -1,0 +1,244 @@
+.btn
+   padding: 18px 27px
+   display: inline-block
+   text-align: center
+   font-size: 16px
+   font-weight: 500
+   background: var(--accent)
+   border: 1px solid transparent
+   border-radius: 100px
+   color: #fff
+   cursor: pointer
+   transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+   &:hover,
+   &:focus
+      background: var(--hover-color)
+   &--light
+      background: #fff
+      color: var(--accent)
+      &:hover,
+      &:focus
+         background: var(--accent)
+         color: #fff
+   &--outline
+      background: #fff
+      border: 1px solid var(--accent)
+      color: var(--accent)
+      &:hover,
+      &:focus
+         color: #fff
+   &--wide
+      width: 100%
+
+.btn-circle
+   width: 55px
+   min-width: 55px
+   height: 55px
+   border-radius: 50%
+   background: #fff
+   color: var(--accent)
+   overflow: hidden
+   display: inline-flex
+   justify-content: center
+   align-items: center
+   transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+   &:hover,
+   &:focus
+      background: var(--hover-color)
+      border-color: var(--hover-color)
+      color: #fff
+
+.btn-info
+   padding: 20px
+   display: inline-block
+   border-radius: 100px
+   background: rgba(#111, 0.2)
+   color: #fff
+   font-size: 12px
+   font-weight: 500
+
+.tel
+   font-size: 18px
+   font-family: Montserrat
+   font-weight: 500
+   white-space: nowrap
+
+.email
+   font-size: 18px
+   font-family: Montserrat
+   font-weight: 500
+   white-space: nowrap
+   color: var(--accent)
+   transition: color var(--transition-duration) ease
+   &:hover,
+   &:focus
+      color: var(--hover-color)
+
+.title
+   font-size: 28px
+   font-weight: 500
+   &--small
+      font-size: 24px
+   &--big
+      font-size: 40px
+
+.link
+   padding: 16px 20px
+   border-radius: 12px
+   background: #fff
+   color: var(--accent)
+   text-align: center
+   display: inline-block
+   font-size: 18px
+   font-weight: 500
+   transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+   &--gray
+      background: var(--sectionBg)
+   &--green
+      color: #00A839
+   &--red
+      color: #EC2E2E
+
+a.link,
+button.link
+   &:hover,
+   &:focus
+      background: var(--hover-color)
+      color: #fff
+
+.text
+   font-size: 16px
+   color: var(--gray)
+
+.text-dots
+   padding-left: 32px
+   position: relative
+   &--small
+      max-width: 282px
+      font-size: 14px
+   &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 5px
+      width: 16px
+      height: 6px
+      background: url('../images/elements/dots.svg') no-repeat center / contain
+
+.img-cover
+   width: 100%
+   padding-bottom: 60%
+   border-radius: var(--radius)
+   overflow: hidden
+   position: relative
+   img
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+
+.list
+   &__item
+      margin-bottom: 32px
+      padding-left: 36px
+      position: relative
+      &::before
+         content: '\e903'
+         font-family: 'icomoon'
+         speak: none
+         position: absolute
+         left: 0
+         top: 0
+         color: var(--accent)
+         font-size: 16px
+      .list--green &
+         &::before
+            color: #00A839
+      .list--red &
+         &::before
+            color: #EC2E2E
+      &:last-child
+         margin-bottom: 0
+      p
+         margin-bottom: 14px
+         &:last-child
+            margin-bottom: 0
+      b
+         font-size: 18px
+         font-weight: 500
+
+.box
+   border-radius: var(--radius)
+   background: var(--sectionBg)
+
+.icon
+   &-external
+      font-size: 10px
+
+@media screen and (max-width: $width_lg)
+   .title
+      font-size: 24px
+      &--small
+         font-size: 22px
+      &--big
+         font-size: 34px
+
+@media screen and (max-width: $width_xs)
+   .link
+      padding: 12px 16px
+      font-size: 16px
+      text-align: left
+      border-radius: 12px
+   .btn
+      font-size: 14px
+      &-circle
+         width: 53px
+         min-width: 53px
+         height: 53px
+   .title
+      font-size: 22px
+      &--small
+         font-size: 20px
+      &--big
+         font-size: 30px
+   .list
+      &__item
+         font-size: 14px
+         line-height: 140%
+         b
+            font-size: 16px
+         &::before
+            font-size: 14px
+
+@media screen and (max-width: $width_mob)
+   .tel, .email
+      font-size: 16px
+   .text-dots
+      padding-left: 29px
+      font-size: 14px
+      line-height: 120%
+      &--small
+         padding-left: 28px
+   .btn-info
+      padding: 13px
+   .btn-circle
+      width: 40px
+      min-width: 40px
+      height: 40px
+   .title
+      &--big
+         font-size: 28px
+   .list
+      &__item
+         padding-left: 22px
+         line-height: 150%
+         p
+            margin-bottom: 6px
+         &::before
+            font-size: 11px
+   .icon
+      &-external
+         font-size: 8px

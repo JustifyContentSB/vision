@@ -1,0 +1,63 @@
+.team
+   &__grid
+      margin: 0 20px
+      grid-template-columns: repeat(4, 1fr)
+      grid-gap: 24px
+   &__item
+      transform: scale(0.8)
+      &.animated
+         transform: scale(1)
+   &__photo
+      min-height: 342px
+      padding-bottom: 110%
+   &__info
+      padding-top: 20px
+      padding-right: 30px
+   &__name
+      margin-bottom: 10px
+      font-size: 20px
+      font-weight: 500
+   &__pro
+      font-size: 14px
+      color: var(--gray)
+
+   @media screen and (max-width: $width_xl)
+      &__photo
+         min-height: 200px
+      &__name
+         font-size: 18px
+
+   @media screen and (max-width: $width_lg)
+      &__grid
+         grid-template-columns: repeat(2, 1fr)
+
+   @media screen and (max-width: $width_xs)
+      &__grid
+         margin: 0 16px
+
+   @media screen and (max-width: $width_mob)
+      &__grid
+         grid-template-columns: 1fr
+         grid-gap: 36px
+      &__photo
+         min-height: 160px
+         padding-bottom: 92%
+         img
+            object-position: top center
+      &__name
+         margin-bottom: 6px
+         font-size: 16px
+
+.section
+   &--team
+      padding-top: 100px
+      border-top: 1px solid rgba(#111, 0.1)
+      background: transparent
+
+   @media screen and (max-width: $width_lg)
+      &--team
+         padding-top: 70px
+
+   @media screen and (max-width: $width_xs)
+      &--team
+         padding-top: 62px

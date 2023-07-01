@@ -1,0 +1,115 @@
+.modal
+   width: calc(100% - 40px)
+   max-width: 1180px
+   padding: 0
+   border-radius: var(--radius)
+   display: none
+   &--form
+      max-width: 578px
+   &__inner
+      padding: 40px
+      & > *:last-child
+         margin-bottom: 0
+   &__top
+      margin-bottom: 48px
+      p
+         margin-bottom: 16px
+      & > *:last-child
+         margin-bottom: 0
+   &__body
+      margin-bottom: 50px
+   &__title
+      margin-bottom: 12px
+   &__lead
+      font-size: 16px
+      font-style: italic
+      font-weight: 400
+   &__text
+      font-size: 16px
+      p:not(:last-child)
+         margin-bottom: 16px
+   &__about
+      margin-bottom: 24px
+   .list
+      margin-bottom: 48px
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 20px 45px
+      li
+         margin-bottom: 0
+   &__notice
+      font-size: 18px
+      font-weight: 500
+   &__info
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: start
+      .list
+         max-width: 324px
+         grid-template-columns: 1fr
+   &__chapter
+      & > *:last-child
+         margin-bottom: 0
+      .link
+         margin-bottom: 24px
+   &__table
+      margin-bottom: 40px
+   &__box
+      padding-top: 48px
+      padding-bottom: 48px
+      border-bottom: 1px solid rgba(#111, 0.1)
+      &:first-child
+         padding-top: 0
+      &:last-child
+         padding-bottom: 0
+         border-bottom: none
+      & > *:last-child
+         margin-bottom: 0
+   &__bottom
+      & > *:not(:last-child)
+         margin-bottom: 24px
+   .form
+      &__inner
+         padding: 0
+
+   @media screen and (max-width: $width_lg)
+      .link
+         font-size: 16px
+      &__inner
+         padding: 40px
+      &__notice
+         font-size: 16px
+
+   @media screen and (max-width: $width_md)
+      &__top
+         margin-bottom: 30px
+      .list
+         margin-bottom: 30px
+         grid-template-columns: 1fr
+      &__table
+         margin-bottom: 30px
+      &__chapter
+         margin-bottom: 30px
+         &:last-child
+            margin-bottom: 0
+         & > *:last-child
+            margin-bottom: 0
+      &__body
+         margin-bottom: 30px
+      &__box
+         padding: 30px 0
+         & > *:last-child
+            margin-bottom: 0
+      &__info
+         grid-template-columns: 1fr
+
+   @media screen and (max-width: $width_mob)
+      width: calc(100% - 32px)
+      &__inner
+         padding: 50px 24px
+      p
+         font-size: 14px
+      .title
+         font-size: 20px
+      .link
+         padding: 16px

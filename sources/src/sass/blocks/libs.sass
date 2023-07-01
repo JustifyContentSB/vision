@@ -1,0 +1,59 @@
+.swiper
+   &-button
+      &-prev
+         &::after
+            content: '\e901'
+      &-next
+         &::after
+            content: '\e900'
+      &-prev,
+      &-next
+         width: 52px
+         height: 52px
+         margin: 0
+         border-radius: 50%
+         background: #fff
+         color: var(--accent)
+         display: inline-flex
+         justify-content: center
+         align-items: center
+         cursor: pointer
+         position: relative
+         transform: none
+         left: auto
+         right: auto
+         top: auto
+         bottom: auto
+         transition: background var(--transition-duration) ease, color var(--transition-duration) ease
+         &:hover,
+         &:focus
+            background: var(--hover-color)
+            color: #fff
+            &::after
+               color: #fff
+         &::after
+            font-size: 12px
+            font-family: 'icomoon'
+            speak: none
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            color: var(--accent)
+
+.animation
+   transition: all .3s ease-out
+
+.fancybox
+   &__container
+      --fancybox-bg: rgba(0, 0, 0, 0.3)
+   &__slide
+      .fancybox__content
+         .f-button.is-close-btn
+            width: 25px
+            height: 25px
+            top: 24px
+            right: 24px
+            background: transparent
+            border-radius: 0
+            color: #000

@@ -1,0 +1,142 @@
+.services
+   &__grid
+      margin-bottom: 56px
+      grid-template-columns: repeat(3, 1fr)
+   &__item
+      min-height: 340px
+      padding: 28px 12px 12px
+      border-radius: var(--radius)
+      background: var(--sectionBg)
+      position: relative
+      overflow: hidden
+   &__title
+      font-size: 24px
+      font-weight: 500
+   &__info
+      height: 100%
+      position: relative
+      z-index: 1
+      display: flex
+      flex-direction: column
+   &__top
+      width: 100%
+      max-width: 267px
+      margin-bottom: 20px
+      padding: 0 16px
+   &__bottom
+      margin-top: auto
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &__img
+      max-width: 226px
+      position: absolute
+      right: 0
+      bottom: 0
+      transform: translateX(50px)
+      &.animated
+         transform: translateX(0)
+   &__description
+      padding: 13px 0 0
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &-text
+         font-size: 28px
+         font-weight: 500
+         margin-right: 20px
+      &-btn
+         min-width: 275px
+         padding: 20px 27px
+         margin-left: auto
+         flex-shrink: 0
+         font-size: 16px
+
+   @media screen and (max-width: $width_xl)
+      &__title
+         font-size: 22px
+      &__img
+         max-width: 180px
+         max-height: 270px
+         &--1
+            max-width: 157px
+            max-height: 270px
+
+   @media screen and (max-width: 1280px)
+      &__description
+         display: flex
+         flex-direction: column
+         align-items: center
+         &-text
+            margin: 0
+            margin-bottom: 24px
+            font-size: 24px
+         &-btn
+            margin-left: 0
+
+   @media screen and (max-width: $width_lg)
+      &__grid
+         grid-template-columns: repeat(2, 1fr)
+
+   @media screen and (max-width: $width_md)
+      &__img
+         max-width: 150px
+         max-height: 240px
+         &--1
+            max-width: 154px
+            max-height: 240px
+
+   @media screen and (max-width: $width_xs)
+      &__grid
+         margin-bottom: 40px
+         grid-template-columns: 1fr
+      &__img
+         max-width: 170px
+         max-height: 260px
+         &--1
+            max-width: 158px
+            max-height: 282px
+      &__title
+         font-size: 20px
+      &__description
+         &-text
+            font-size: 20px
+
+   @media screen and (max-width: $width_mob)
+      &__grid
+         margin-bottom: 28px
+         grid-gap: 14px
+      &__item
+         min-height: 260px
+         padding: 20px 5px 4px
+      &__top
+         max-width: 218px
+      &__bottom
+         padding: 0 7px 4px
+      &__img
+         max-width: 170px
+         max-height: 270px
+         right: -6px
+         &--1
+            max-width: 153px
+            max-height: 279px
+      &__description
+         &-btn
+            width: 100%
+            min-width: auto
+
+.section
+   &--services
+      .section
+         &__header
+            margin-bottom: 48px
+            > *
+               margin-bottom: 20px
+            .text-dots
+               max-width: 572px
+
+   @media screen and (max-width: $width_md)
+      &--services
+         .section
+            &__header
+               margin-bottom: 22px

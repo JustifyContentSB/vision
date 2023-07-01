@@ -1,0 +1,47 @@
+.table
+   &__item
+      margin-bottom: 12px
+      padding: 16px 26px
+      border-radius: 12px
+      background: var(--sectionBg)
+      font-size: 18px
+      display: flex
+      align-items: flex-start
+      &:last-child
+         margin-bottom: 0
+   &__title
+      max-width: 645px
+      margin-right: 20px
+      flex-grow: 1
+      &--wide
+         max-width: 838px
+      p
+         margin-bottom: 16px
+         &:last-child
+            margin-bottom: 0
+   &__price
+      color: var(--accent)
+      font-size: 20px
+      margin-left: auto
+      flex-shrink: 0
+
+   @media screen and (max-width: $width_lg)
+      &__price
+         font-size: 18px
+
+   @media screen and (max-width: $width_md)
+      &__item,
+      &__price
+         font-size: 16px
+
+   @media screen and (max-width: $width_mob)
+      &__item,
+      &__price
+         font-size: 14px
+      &__item
+         flex-direction: column
+      &__title
+         margin-right: 0
+         margin-bottom: 16px
+      
+      

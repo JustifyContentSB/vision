@@ -1,0 +1,92 @@
+.form
+   &__inner
+      padding: 36px 36px 44px
+      border-radius: var(--radius)
+      background: #fff
+   &__top
+      margin-bottom: 50px
+   &__title
+      margin-bottom: 12px
+   &__lead
+      width: 100%
+      max-width: 500px
+   &__main
+      margin-bottom: 12px
+   &__label
+      margin-bottom: 12px
+      display: block
+   &__field,
+   &__textarea
+      width: 100%
+      padding: 12px
+      background: var(--sectionBg)
+      border: 1px solid transparent
+      border-radius: 8px
+      resize: none
+      font-size: 14px
+      color: var(--primary)
+      transition: border-color var(--transition-duration) ease
+      &::placeholder
+         color: var(--gray)
+      &:focus
+         border-color: var(--accent)
+   &__textarea
+      min-height: 110px
+   &__agree
+      margin-bottom: 28px
+      font-size: 14px
+      color: var(--gray)
+      input
+         display: none
+         &:checked ~ *
+            color: var(--accent)
+      &-label
+         display: inline-flex
+         cursor: pointer
+      &-checkbox
+         width: 16px
+         min-width: 16px
+         height: 16px
+         margin-right: 8px
+         display: inline-flex
+         justify-content: center
+         align-items: center
+         border-radius: 3px
+         border: var(--border)
+         position: relative
+         &::after
+            content: '\e903'
+            font-family: 'icomoon'
+            speak: none
+            font-size: 8px
+            color: var(--accent)
+            opacity: 0
+         input:checked ~ &
+            border-color: var(--accent)
+            &::after
+               opacity: 1
+
+   @media screen and (max-width: $width_xs)
+      &__top
+         margin-bottom: 30px
+
+   @media screen and (max-width: $width_mob)
+      &__inner
+         padding: 30px
+      &__main
+         margin-bottom: 10px
+      &__title
+         font-size: 20px
+      &__lead
+         font-size: 14px
+         line-height: 135%
+      &__field,
+      &__textarea,
+      &__agree
+         font-size: 12px
+      &__textarea
+         min-height: 100px
+
+   @media screen and (max-width: 400px)
+      &__inner
+         padding: 20px

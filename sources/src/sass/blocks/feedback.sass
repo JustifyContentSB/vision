@@ -1,0 +1,46 @@
+.feedback
+   &__grid
+      padding: 20px 20px 15px
+      background: linear-gradient(#A7C3E7, #C6D8EF, #A7C3E7, #B8CFED, #CAE0FE, #D4E7FF, #B8D7FF)
+      border-radius: var(--radius)
+      overflow: hidden
+      grid-gap: 20px
+      position: relative
+      overflow: hidden
+      @extend %section-lines
+   &__title
+      padding-right: 30px
+      line-height: 123%
+   &__info
+      padding: 20px
+      color: #fff
+   &__form
+      position: relative
+      z-index: 1
+
+   @media screen and (max-width: $width_md)
+      &__grid
+         grid-gap: 40px
+      &__title
+         padding-right: 0
+
+   @media screen and (max-width: $width_xs)
+      &__info
+         padding: 10px
+      &__title
+         font-size: 24px
+
+   @media screen and (max-width: $width_mob)
+      &__grid
+         padding: 24px 16px
+      &__title
+         padding: 0 4px
+      &__info
+         padding: 0
+
+.section
+   &--feedback
+      margin-bottom: 20px
+      
+      @media screen and (max-width: $width_xs)
+         margin-bottom: 40px

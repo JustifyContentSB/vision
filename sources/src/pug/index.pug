@@ -1,0 +1,25 @@
+extends base/_layout
+block head
+   title Главная
+block page
+   main.main
+      section.section.section--chapter
+         .section__wrapper
+            .chapter
+               .chapter__inner
+                  .chapter__top
+                     h2.chapter__lead Пожалуйста, выберите подходящий раздел:
+                  .chapter__content
+                     ul.chapter__grid.grid
+                        li.chapter__item
+                           a.chapter__link.box(href="#")
+                              .chapter__img
+                                 img.chapter__img-eye.animation(src="images/elements/empty.gif" data-src="images/chapter/chapter-1.png", data-lazyload alt="картинка" width="327" height="371")
+                              .chapter__text
+                                 p Пациентам
+                        li.chapter__item
+                           a.chapter__link.box(href="#")
+                              .chapter__img
+                                 img.animation(src="images/elements/empty.gif" data-src="images/chapter/chapter-2.png", data-lazyload alt="картинка" width="386" height="387")
+                              .chapter__text
+                                 p Профессионалам

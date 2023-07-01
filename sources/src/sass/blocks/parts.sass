@@ -1,0 +1,97 @@
+.parts
+   &__item
+      min-height: 340px
+      padding: 28px 36px
+      border-radius: var(--radius)
+      overflow: hidden
+      position: relative
+      background: linear-gradient(140deg, #A7C3E7 0%, #CAE0FE 66.89%, #D4E7FF 87.95%, #B8D7FF 100%)
+      &--secondary
+         color: #fff
+   &__info
+      height: 100%
+      position: relative
+      z-index: 2
+      display: flex
+      flex-direction: column
+   &__top
+      margin-bottom: 20px
+      > *
+         &:last-child
+            margin-bottom: 0
+   &__title
+      margin-bottom: 8px
+   &__desc
+      margin-bottom: 60px
+   &__bottom
+      margin-top: auto
+   &__bg
+      position: absolute
+      z-index: 1
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+   &__pic
+      position: absolute
+      right: 0
+      top: 0
+   &__forum
+      margin-left: 18px
+      display: flex
+      flex-wrap: wrap
+      li
+         width: 64px
+         height: 64px
+         margin-left: -18px
+         position: relative
+         img
+            position: absolute
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+
+   @media screen and (max-width: $width_xl)
+      &__top
+         padding-right: 150px
+      &__pic
+         width: 180px
+
+   @media screen and (max-width: $width_md)
+      &__top
+         padding-right: 100px
+      &__pic
+         width: 128px
+      &__grid
+         grid-template-columns: 1fr 1fr
+      &__item
+         padding: 28px 24px
+
+   @media screen and (max-width: 800px)
+      &__grid
+         grid-template-columns: 1fr
+      &__item
+         min-height: 240px
+
+   @media screen and (max-width: $width_xs)
+      &__top
+         padding-right: 40px
+      &__desc
+         margin-bottom: 40px
+      &__title
+         max-width: 220px
+         font-size: 24px
+      &__item
+         min-height: 296px
+         padding: 22px
+      &__forum
+         li
+            width: 52px
+            height: 52px
+      .btn
+         padding: 20px
+      

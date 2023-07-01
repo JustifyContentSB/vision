@@ -1,0 +1,300 @@
+extends base/_layout
+block head
+   title Пациентам
+block header
+   header.header.header--patients
+      .header__inner
+         .header__menu.menu
+            a.btn-circle.menu__burger(href="#menu" aria-label="открыть меню" data-fancybox)
+               i.icon.icon-burger
+            nav.menu__nav#menu
+               ul.menu__list
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="patients.html") Пациентам
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="study.html") Обучение
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="index.html") Контакты
+            .menu__manage
+               a.btn.menu__manage-btn(href="#form" data-fancybox) Оставить заявку
+         section.header__hero.hero
+            .hero__inner
+               .hero__top
+                  h1.hero__title.hero__title--patients
+                     span.hero__title-pic.
+                        Пациентам #[img.hero__title-logo.animation(src="images/elements/logo.png", alt="логотип" width="95" height="88")]
+                  p.hero__lead В нашей клинике оказывается полный спектр услуг, связанных с выявлением и коррекцией зрительных нарушений, в том числе бинокулярных
+         .header__logo
+            img(src="images/elements/empty.gif" data-src="images/elements/logo.png", data-lazyload, alt="логотип" width="154")
+         .header__eye.animation
+            img(src="images/elements/empty.gif" data-src="images/header/eye.png", data-lazyload, alt="глаз" width="517" height="586")
+
+block page
+   main.main
+      section.section.section--services.section--large.container
+         .section__header.section__header--detailed
+            h2.section__title Услуги и цены
+            p.text-dots Мы специализируемся на подборе сложной коррекции зрения, в том числе призматической, а также на лечении косоглазия безоперационными методами. Наши услуги включают:
+         .section__wrapper
+            .services
+               .services__inner
+                  ul.services__grid.grid
+                     li.services__item
+                        .services__info
+                           .services__top
+                              h3.services__title Подбор призматической коррекции
+                           .services__bottom
+                              a.btn-circle(href="#" aria-label="перейти на страницу услуги") #[i.icon.icon-external]
+                              a.btn-info(href="#") #[i.icon.icon-info] Подробнее
+                        .services__img.services__img--1.animation
+                           img(src="images/elements/empty.gif" data-src="images/services/services-1.png", data-lazyload, alt="фото" width="200" height="341")
+                     li.services__item
+                        .services__info
+                           .services__top
+                              h3.services__title Курс развития зрительных функций
+                           .services__bottom
+                              a.btn-circle(href="#" aria-label="перейти на страницу услуги") #[i.icon.icon-external]
+                              a.btn-info(href="#") #[i.icon.icon-info] Подробнее
+                        .services__img.animation
+                           img(src="images/elements/empty.gif" data-src="images/services/services-2.png", data-lazyload, alt="фото" width="226" height="341")
+                     li.services__item
+                        .services__info
+                           .services__top
+                              h3.services__title Цветокоррекция
+                           .services__bottom
+                              a.btn-circle(href="#" aria-label="перейти на страницу услуги") #[i.icon.icon-external]
+                              a.btn-info(href="#") #[i.icon.icon-info] Подробнее
+                        .services__img.animation
+                           img(src="images/elements/empty.gif" data-src="images/services/services-3.png", data-lazyload, alt="фото" width="225" height="341")
+
+                  .services__description
+                     p.services__description-text.
+                        Чтобы ознакомиться с ценами нажмите на кнопку ниже
+                     a.services__description-btn.btn(href="#") Стоимость
+
+      section.section.section--optics.section--large
+         .section__wrapper
+            .optics
+               .optics__inner
+                  ul.optics__grid.grid
+                     li.optics__item
+                        .optics__img.img-cover
+                           img(src="images/elements/empty.gif" data-src="images/optics/optics.jpg", data-lazyload, alt="оптика" width="690" height="493")
+                     li.optics__item.optics__item--info
+                        .optics__info
+                           .optics__info-text
+                              h2.optics__title.title.title--big Оптика
+                              p Помимо подбора коррекции зрения любой сложности в нашей клинике вы сможете заказать изготовление очков по выписанному рецепту.
+                              p #[b Чтобы ознакомиться с ценами нажмите на кнопку ниже]
+                           a.optics__btn.btn(href="#") Стоимость
+
+      section.section.section--about
+         .section__wrapper
+            .about
+               .about__inner
+                  .about__content
+                     .about__img.about__img-01.animation
+                        img(src="images/elements/empty.gif" data-src="images/about/mobile-01.png", data-lazyload, alt="картинка" width="299" height="583")
+                     .about__img.about__img-02.animation
+                        img(src="images/elements/empty.gif" data-src="images/about/mobile-02.png", data-lazyload, alt="картинка" width="202" height="281")
+                     .about__img.about__img-03.animation
+                        img(src="images/elements/empty.gif" data-src="images/about/mobile-03.png", data-lazyload, alt="картинка" width="223" height="453")
+                     .about__info
+                        h2.about__title.title.title--big Наша команда
+                        .about__text
+                           p Наши высококвалифицированные специалисты в области оптометрии и врачи офтальмологии готовы помочь вам подобрать идеальную коррекцию зрения (очки или контактные линзы) и решить проблемы, связанные с бинокулярными нарушениями. 
+                           p У нас работает коллектив профессионалов, которые принимают пациентов по единому алгоритму подбора коррекции зрения, разработанном Натальей Ринской.
+                        .about__description
+                           p В этом алгоритме собраны самые современные знания мировой оптометрии, основанные на клинических исследованиях и доказательной медицине. 
+                              
+      section.section.section--founder
+         .section__wrapper
+            .founder
+               .section__header.visually-hidden
+                  h2.section__title О нашей клинике
+               .founder__inner
+                  .founder__grid.grid
+                     .founder__main
+                        .founder__top
+                           p.founder__lead.text-dots Основатель клиники
+                           p.founder__name Наталья Вадимовна Ринская
+                        .founder__info
+                           ul.list
+                              li.list__item
+                                 p #[b Получила степень бакалавра оптометрии в Иерусалимском академическом институте Хадасса (Израиль)]
+                                 p Продолжила свое образование в Университете Лиги Плюща (на курсах повышения квалификации в Университете Пенсильвании) и Лондонском городском университете (City University of London).
+                              li.list__item
+                                 p #[b Получила степень Магистра оптометрии в Университете Кардифф (Великобритания)]
+                                 p И степень Магистра педагогики и психологии (Московский педагогический государственный университет).
+                              li.list__item
+                                 p #[b Прошла профессиональную переподготовку]
+                                 p По программе Медицинская оптика в области оптометрии. (Государственном автономном профессиональном образовательном учреждении «Колледж предпринимательства №11» г. Москва). 
+                              li.list__item
+                                 p #[b Наталья — постоянный слушатель и приглашенный лектор]
+                                 p На профессиональных форумах, конференциях и симпозиумах в РФ и за рубежом. Благодаря этому она остается всегда в курсе последних научных исследований и достижений в сфере оптометрии.
+                     
+                     .founder__about
+                        .founder__photo.img-cover
+                           img(src="images/elements/empty.gif" data-src="images/founder/founder.jpg", data-lazyload, alt="Наталья Вадимовна Ринская" width="690" height="691")
+                        p.founder__description Магистр оптометрии, специалист по бинокулярным нарушениям
+
+      section.section.section--team.section--big.section--large.container
+         .section__header.section__header--detailed
+            p.text-dots.text-dots--small Нести пользу могут только настоящие профессионалы. Знакомьтесь:
+            h2.section__title Специалисты #[span клиники]
+         .section__wrapper
+            .team
+               .team__inner
+                  ul.team__grid.grid
+                     li.team__item.animation
+                        .team__photo.img-cover
+                           img(src="images/elements/empty.gif" data-src="images/team/team-1.jpg", data-lazyload, alt="Дари Георгиевна Бальжинова" width="314" height="342")
+                        .team__info
+                           p.team__name Дари Георгиевна Бальжинова
+                           p.team__pro Офтальмолог, заведующая направлением “Визуальная терапия”
+                     li.team__item.animation
+                        .team__photo.img-cover
+                           img(src="images/elements/empty.gif" data-src="images/team/team-2.jpg", data-lazyload, alt="Наталья Алексеевна Пиотровская" width="314" height="342")
+                        .team__info
+                           p.team__name Наталья Алексеевна Пиотровская
+                           p.team__pro Офтальмолог
+                     li.team__item.animation
+                        .team__photo.img-cover
+                           img(src="images/elements/empty.gif" data-src="images/team/team-3.jpg", data-lazyload, alt="Рузалия Рифкатовна Мустафина" width="314" height="342")
+                        .team__info
+                           p.team__name Рузалия Рифкатовна Мустафина
+                           p.team__pro Оптометрист
+                     li.team__item.animation
+                        .team__photo.img-cover
+                           img(src="images/elements/empty.gif" data-src="images/team/team-4.jpg", data-lazyload, alt="Ирина Анатольевна Мартыненко" width="314" height="342")
+                        .team__info
+                           p.team__name Ирина Анатольевна Мартыненко
+                           p.team__pro Оптик-консультант
+
+      section.section.section--reviews.section--big
+         .section__header.section__header--detailed.container
+            p.text-dots.text-dots--small Мы гордимся положительными отзывами, которые подтверждают нашу преданность и профессионализм!
+            h2.section__title Узнайте, что говорят #[span о нас наши довольные пациенты.]
+            img.section__hand(src="images/elements/empty.gif" data-src="images/elements/hand.svg", data-lazyload, alt="свайп" width="32" height="32")
+            .section__controls
+               button.swiper-button-prev.reviews-button-prev
+               button.swiper-button-next.reviews-button-next
+         .section__wrapper
+            .reviews
+               .reviews__inner
+                  .reviews__slider.slider
+                     .slider__inner
+                        .reviews__container.slider__container
+                           .swiper-wrapper
+                              .reviews__slide.slider__item.swiper-slide
+                                 .reviews__slide-info
+                                    p.reviews__slide-title Риноптика
+                                    p.reviews__slide-text Замечательный медицинский центр. Были на приёме у Дари Георгиевны. Отличный специалист, очень внимательно провела обследование, выявила отклонения и предложила варианты коррекции. Очень приятный доктор, невероятно чуткий и деликатный специалист. Приём длился больше часа, исследовала зрение всеми возможными способами, пожалуй нигде не встречала такого внимательного подхода.
+                                    .reviews__slide-author
+                                       .reviews__slide-photo
+                                          img(src="images/elements/empty.gif" data-src="images/reviews/reviews-1.png", data-lazyload, alt="фото комментатора" width="40" height="40")
+                                       p.reviews__slide-name Юлия О.
+                              .reviews__slide.slider__item.swiper-slide
+                                 .reviews__slide-info
+                                    p.reviews__slide-title Риноптика
+                                    p.reviews__slide-text Покупала маме очки, классный подход к клиентам, помогли выбрать хорошую оправу. Есть на любой кошелёк выбор оправ. Мне понравились врачи и менеджеры, видела, что много клиентов с детьми обращаются
+                                    .reviews__slide-author
+                                       .reviews__slide-photo
+                                          img(src="images/elements/empty.gif" data-src="images/reviews/reviews-2.png", data-lazyload, alt="фото комментатора" width="40" height="40")
+                                       p.reviews__slide-name Екатерина Т.
+                              .reviews__slide.slider__item.swiper-slide
+                                 .reviews__slide-info
+                                    p.reviews__slide-title Риноптика
+                                    p.reviews__slide-text Отличное место. Работают только профессионалы! У ребенка (7 лет) было расходящиеся косоглазие, жаловался на периодическое двоение. При очередном осмотре в медси заведующая обратила внимание на большие углы отклонения глаза (более 40 градусов вблизи и 30 градусов вдали). Порекомендовала обратиться в данный центр и пройти курс лечения.
+                                    .reviews__slide-author
+                                       .reviews__slide-photo
+                                          img(src="images/elements/empty.gif" data-src="images/reviews/reviews-3.png", data-lazyload, alt="фото комментатора" width="40" height="40")
+                                       p.reviews__slide-name Эдгар
+                              .reviews__slide.slider__item.swiper-slide
+                                 .reviews__slide-info
+                                    p.reviews__slide-title Риноптика
+                                    p.reviews__slide-text Замечательный медицинский центр. Были на приёме у Дари Георгиевны. Отличный специалист, очень внимательно провела обследование, выявила отклонения и предложила варианты коррекции. Очень приятный доктор, невероятно чуткий и деликатный специалист. Приём длился больше часа, исследовала зрение всеми возможными способами, пожалуй нигде не встречала такого внимательного подхода. 
+                                    .reviews__slide-author
+                                       .reviews__slide-photo
+                                          img(src="images/elements/empty.gif" data-src="images/reviews/reviews-4.png", data-lazyload, alt="фото комментатора" width="40" height="40")
+                                       p.reviews__slide-name Татьяна
+
+      section.section.section--videos.section--big
+         .section__header.section__header--detailed.container
+            p.text-dots.text-dots--small ММы заботимся о качестве предоставляемых услуг и оперативном сервис. #[br] Благодарим Вас за обратную связь!
+            h2.section__title Видеоотзывы клиентов #[span центра коррекции зрения]
+            img.section__hand(src="images/elements/empty.gif" data-src="images/elements/hand.svg", data-lazyload, alt="свайп" width="32" height="32")
+            .section__controls
+               button.swiper-button-prev.videos-button-prev
+               button.swiper-button-next.videos-button-next
+         .section__wrapper
+            .videos
+               .videos__inner
+                  .videos__slider.slider
+                     .slider__inner
+                        .videos__container.slider__container
+                           .swiper-wrapper
+                              a.videos__slide.slider__item.swiper-slide(href="https://www.youtube.com/watch?v=YQ79aWdHYRc" data-fancybox="gallery") 
+                                 .videos__preview.img-cover
+                                    img(src="images/elements/empty.gif" data-src="images/videos/videos-01.jpg", data-lazyload, alt="превью" width="427" height="274")
+                                 .videos__play
+                              a.videos__slide.slider__item.swiper-slide(href="https://youtu.be/nIhNYLbhOWA" data-fancybox="gallery") 
+                                 .videos__preview.img-cover
+                                    img(src="images/elements/empty.gif" data-src="images/videos/videos-02.jpg", data-lazyload, alt="превью" width="427" height="274")
+                                 .videos__play
+                              a.videos__slide.slider__item.swiper-slide(href="https://youtu.be/2mdVZcEWGJY" data-fancybox="gallery") 
+                                 .videos__preview.img-cover
+                                    img(src="images/elements/empty.gif" data-src="images/videos/videos-03.jpg", data-lazyload, alt="превью" width="427" height="274")
+                                 .videos__play
+                              a.videos__slide.slider__item.swiper-slide(href="https://youtu.be/-0oIvgHcfqg" data-fancybox="gallery") 
+                                 .videos__preview.img-cover
+                                    img(src="images/elements/empty.gif" data-src="images/videos/videos-04.jpg", data-lazyload, alt="превью" width="427" height="274")
+                                 .videos__play
+                              a.videos__slide.slider__item.swiper-slide(href="https://youtu.be/xbgB5D--7Do" data-fancybox="gallery") 
+                                 .videos__preview.img-cover
+                                    img(src="images/elements/empty.gif" data-src="images/videos/videos-01.jpg", data-lazyload, alt="превью" width="427" height="274")
+                                 .videos__play
+                              a.videos__slide.slider__item.swiper-slide(href="https://youtu.be/Bu1JQ9W--Ew" data-fancybox="gallery") 
+                                 .videos__preview.img-cover
+                                    img(src="images/elements/empty.gif" data-src="images/videos/videos-02.jpg", data-lazyload, alt="превью" width="427" height="274")
+                                 .videos__play
+                              a.videos__slide.slider__item.swiper-slide(href="https://youtu.be/jUWpJOy0RGw" data-fancybox="gallery") 
+                                 .videos__preview.img-cover
+                                    img(src="images/elements/empty.gif" data-src="images/videos/videos-03.jpg", data-lazyload, alt="превью" width="427" height="274")
+                                 .videos__play
+                              a.videos__slide.slider__item.swiper-slide(href="https://youtu.be/AS_6kIGKWmo" data-fancybox="gallery") 
+                                 .videos__preview.img-cover
+                                    img(src="images/elements/empty.gif" data-src="images/videos/videos-04.jpg", data-lazyload, alt="превью" width="427" height="274")
+                                 .videos__play
+                              a.videos__slide.slider__item.swiper-slide(href="https://youtu.be/fk-qj9J9g9Q" data-fancybox="gallery") 
+                                 .videos__preview.img-cover
+                                    img(src="images/elements/empty.gif" data-src="images/videos/videos-04.jpg", data-lazyload, alt="превью" width="427" height="274")
+                                 .videos__play
+
+      section.section.section--faq.section--big.container
+         .section__header
+            h2.section__title Наши эксперты собрали ответы #[span на наиболее часто задаваемые вопросы:]
+         .section__wrapper
+            .faq
+               .faq__inner
+                  ul.faq__list
+                     li.faq__item
+                        a.faq__btn(href="#" data-dropdown)
+                           span.faq__btn-text Как нас найти?
+                        .faq__answer
+                           p Замечательный медицинский центр. Были на приёме у Дари Георгиевны. Отличный специалист, очень внимательно провела обследование, выявила отклонения и предложила варианты коррекции. Очень приятный доктор, невероятно чуткий и деликатный специалист. Приём длился больше часа, исследовала зрение всеми возможными способами, пожалуй нигде не встречала такого внимательного подхода.
+                     li.faq__item
+                        a.faq__btn(href="#" data-dropdown)
+                           span.faq__btn-text Как связаться с нами?
+                        .faq__answer
+                           p Замечательный медицинский центр. Были на приёме у Дари Георгиевны. Отличный специалист, очень внимательно провела обследование, выявила отклонения и предложила варианты коррекции. Очень приятный доктор, невероятно чуткий и деликатный специалист. Приём длился больше часа, исследовала зрение всеми возможными способами, пожалуй нигде не встречала такого внимательного подхода.
+                     li.faq__item
+                        a.faq__btn(href="#" data-dropdown)
+                           span.faq__btn-text Вы можете задать свой вопрос, обсудить именно ваш сложный случай со специалистом на нашем форуме
+                        .faq__answer
+                           p Замечательный медицинский центр. Были на приёме у Дари Георгиевны. Отличный специалист, очень внимательно провела обследование, выявила отклонения и предложила варианты коррекции. Очень приятный доктор, невероятно чуткий и деликатный специалист. Приём длился больше часа, исследовала зрение всеми возможными способами, пожалуй нигде не встречала такого внимательного подхода.
+                     li.faq__item
+                        a.faq__btn(href="#" data-dropdown)
+                           span.faq__btn-text Форум с частозадаваемыми вопросами от пациентов
+                        .faq__answer
+                           p Замечательный медицинский центр. Были на приёме у Дари Георгиевны. Отличный специалист, очень внимательно провела обследование, выявила отклонения и предложила варианты коррекции. Очень приятный доктор, невероятно чуткий и деликатный специалист. Приём длился больше часа, исследовала зрение всеми возможными способами, пожалуй нигде не встречала такого внимательного подхода.

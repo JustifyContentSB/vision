@@ -1,0 +1,72 @@
+.optics
+   &__item
+      border-radius: var(--radius)
+      overflow: hidden
+      background: var(--sectionBg)
+      position: relative
+      &--info
+         &::after
+            content: ''
+            position: absolute
+            right: 27px
+            top: 27px
+            width: 36px
+            height: 8px
+            background: url('../images/elements/dots-02.svg') no-repeat center / contain
+   &__title
+      margin-bottom: 38px
+   &__info
+      width: 100%
+      max-width: 632px
+      height: 100%
+      padding: 54px 36px 36px
+      display: flex
+      flex-direction: column
+      position: relative
+      z-index: 1
+      p
+         margin-bottom: 20px
+         font-size: 18px
+         line-height: 150%
+   &__btn
+      min-width: 250px
+      padding: 20px 27px
+      margin-top: auto
+      align-self: start
+   &__img
+      padding-bottom: 71.5%
+      height: 100%
+
+   @media screen and (max-width: $width_xs)
+      &__info
+         p
+            font-size: 16px
+
+   @media screen and (max-width: $width_mob)
+      &__title
+         margin-bottom: 32px
+      &__item
+         &--info
+            &::after
+               right: 13px
+               top: 16px
+               width: 25px
+               height: 6px
+      &__info
+         padding: 24px 20px 28px
+         &-text
+            margin-bottom: 40px
+            & > *:last-child
+               margin-bottom: 0
+         p
+            margin-bottom: 24px
+            padding-right: 20px
+            font-size: 14px
+      &__btn
+         width: 100%
+
+@media screen and (max-width: $width_mob)
+   .section
+      &--optics
+         margin-left: -16px
+         margin-right: -16px

@@ -1,0 +1,218 @@
+extends base/_layout
+block head
+   title Обучение
+block header
+   header.header.header--study
+      .header__inner.header__inner--fon
+         .header__menu.menu
+            a.btn-circle.menu__burger(href="#menu" aria-label="открыть меню" data-fancybox)
+               i.icon.icon-burger
+            nav.menu__nav#menu
+               ul.menu__list
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="patients.html") Пациентам
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="study.html") Обучение
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="index.html") Контакты
+            .menu__manage
+               a.btn.menu__manage-btn(href="#form" data-fancybox) Оставить заявку
+         section.header__hero.hero
+            .hero__inner
+               .hero__top
+                  h1.hero__title
+                     span Школа Оптометрии
+                     span.hero__title-colour Натальи Ринской
+                  p.hero__description В Школе оптометрии Натальи Ринской, основанной в 2018 году, проводятся на регулярной основе очные семинары по оптометрии. Данное обучение предназначено для практикующих оптометристов и врачей офтальмологов.
+         .header__logo
+            img(src="images/elements/empty.gif" data-src="images/elements/logo.png", data-lazyload, alt="логотип" width="154")
+         .header__natalya.animation
+            img(src="images/elements/empty.gif" data-src="images/header/natalya.png", data-lazyload, alt="Наталья Ринская" width="414" height="650")
+block page
+   main.main
+      section.section.section--advice
+         .section__header.visually-hidden
+            h2.section__title Рекомендации
+         .section__wrapper
+            .advice
+               .advice__inner
+                  ul.advice__grid.grid
+                     li.advice__item
+                        p.advice__item-dots.text-dots Если вы хотите, чтобы вы или ваши сотрудники повысили свой уровень знаний и расширили перечень оказываемых услуг в вашей оптике или клинике, научились решать проблемы пациентов, связанные с бинокулярными нарушениями,
+                     li.advice__item.advice__item--secondary
+                        p Рекомендуем вам приобрести “Настольную книгу оптометриста”, прослушать вебинары и посетить очные семинары магистра оптометрии и педагогики Натальи Ринской. #[i.icon-check]
+
+      section.section.section--event
+         .section__header.visually-hidden
+            h2.section__title Мероприятия
+         .section__wrapper
+            .event
+               .event__inner
+                  ul.event__grid.grid
+                     li.event__item.box
+                        h3.event__title.title Офлайн мероприятия:
+                        .event__text
+                           p Только на очных семинарах вы сможете получить необходимые для работы практические навыки и ответы на все профессиональные вопросы, которые вас волнуют. Знания, полученные на семинарах и почерпнутые из книги, помогут вам увеличить количество рецептурных линз (призматические, прогрессивные, офисные индивидуальные монофокальные), назначаемых вами или вашими сотрудниками. 
+
+                           p Кроме того, что вы научитесь подбирать и назначать сложную коррекцию зрения и решать проблемы пациентов, вы также повысите средний чек в вашей организации.
+                     li.event__item.event__item--secondary.box
+                        .event__schedule
+                           h3.event__title.title Расписание мероприятий #[br] на июнь 2023 года:
+                           p.event__desc #[b 10-11 июля 2023 г.] - семинар “Алгоритм подбора коррекции зрения”
+                           a.link.link--gray(href="#") Стоимость участия за два дня - 30.000р
+                        ul.event__manage.manage
+                           li
+                              a.btn.btn--wide(href="#") Купить
+                           li
+                              a.btn.btn--wide.btn--outline(href="#") Запросить консультацию
+                     
+      section.section.section--author
+         .section__wrapper
+            .author
+               .author__inner
+                  .author__grid.grid
+                     .author__photo
+                        img(src="images/elements/empty.gif" data-src="images/author/author.png", data-lazyload, alt="Автор: Н.В. Ринская" width="690" height="710")
+                     .author__content.box
+                        .author__info
+                           h2.author__title.title “Настольная книга оптометриста” #[br] Учебное пособие. Автор: Н.В. Ринская
+                           p.author__text.text В свете современных мировых достижений в области оптометрии представлены самые последние научные данные о распространённых зрительных отклонениях, основных методах диагностики нарушений рефракции глаза и методах их коррекции. 
+                           a.link(href="#") Стоимость книги - 8.000 рублей
+                        ul.author__manage.manage
+                           li
+                              a.btn.btn--wide(href="#") Купить
+                           li
+                              a.btn.btn--wide.btn--outline(href="#") Запросить консультацию
+
+      section.section.section--feedback
+         .section__wrapper
+            .feedback
+               .feedback__inner
+                  .feedback__grid.grid
+                     .feedback__info
+                        h2.title.feedback__title Хотите получить консультацию от наших экспертов в области обучения #[br] и развития в сфере коррекции зрения?
+                     form.feedback__form.form(action="#")
+                        .form__inner
+                           .form__top
+                              h2.form__title.title Заполните форму ниже,
+                              p.form__lead.text и мы свяжемся с вами, чтобы обсудить ваши вопросы относительно обучения в нашем центре.
+                           .form__content
+                              .form__main
+                                 .form__inputs
+                                    label.form__label
+                                       input.form__field(type="text" placeholder="Имя")
+                                    label.form__label
+                                       input.form__field(type="text" placeholder="Email")
+                                    label.form__label
+                                       input.form__field(type="text" placeholder="+7 (999) 999-99-99")
+                                 textarea.form__textarea(name="textarea" placeholder="Комментарий")
+                              .form__agree
+                                 label.form__agree-label
+                                    input(type="checkbox")
+                                    span.form__agree-checkbox
+                                    span Соглашаюсь на обработку персональных данных
+                              .form__bottom
+                                 button.form__submit.btn.btn--wide Оставить заявку
+
+      section.section.section--parts
+         .section__wrapper
+            .parts
+               .parts__inner
+                  ul.parts__grid.grid
+                     li.parts__item
+                        .parts__info
+                           .parts__top
+                              h2.parts__title.title.title--small Библиотека знаний
+                           .parts__bottom
+                              a.btn.btn--wide(href="#") Узнать полезную информацию
+                        img.parts__bg(src="images/elements/empty.gif" data-src="images/parts/parts-1.png", data-lazyload, alt="картинка")
+                     li.parts__item.parts__item--secondary
+                        .parts__info
+                           .parts__top
+                              h2.parts__title.title.title--small Форум
+                              p.parts__desc Хотите задать вопрос? Переходите на наш форум
+                              ul.parts__forum
+                                 li
+                                    img(src="images/elements/empty.gif" data-src="images/parts/forum-1.png", data-lazyload, alt="форум" width="64" height="64")
+                                 li
+                                    img(src="images/elements/empty.gif" data-src="images/parts/forum-2.png", data-lazyload, alt="форум" width="64" height="64")
+                                 li
+                                    img(src="images/elements/empty.gif" data-src="images/parts/forum-3.png", data-lazyload, alt="форум" width="64" height="64")
+                                 li
+                                    img(src="images/elements/empty.gif" data-src="images/parts/forum-4.png", data-lazyload, alt="форум" width="64" height="64")
+                           .parts__bottom
+                              a.btn.btn--light.btn--wide(href="#") Перейти на форум
+                        img.parts__pic(src="images/elements/empty.gif" data-src="images/parts/parts-2.png", data-lazyload, alt="картинка" width="210" height="205")
+
+block footer
+   footer.footer
+      .footer__inner
+         .footer__top
+            .footer__left
+               a.footer__logo(href="#" aria-label="На главную страницу" title="На главную страницу")
+                  img(src="images/elements/logo-footer.png", alt="логотип" width="178" height="55")
+            .footer__medium
+               nav.footer__nav
+                  ul.footer__nav-list
+                     li
+                        a(href="#description" data-fancybox) О нас
+                     li
+                        a(href="#info" data-fancybox) Пациентам
+                     li
+                        a(href="#medication" data-fancybox) Профессионалам
+                     li
+                        a(href="#table" data-fancybox) Библиотека знаний
+                     li
+                        a(href="#price" data-fancybox) Форум
+               .footer__contacts
+                  .footer__contacts-feedback
+                     a.footer__contacts-tel.tel(href="tel:+79670483343") +7 (967) 048 33 43
+                     a.email(href="mailto:info@rinoptica.ru") info@rinoptica.ru
+                  .footer__contacts-socials.socials
+                     ul.socials__list
+                        li.socials__item
+                           a.socials__btn(href="#" aria-label="телеграм")
+                              i.icon.icon-telegram
+                        li.socials__item
+                           a.socials__btn(href="#" aria-label="инстаграм")
+                              i.icon.icon-insta
+                        li.socials__item
+                           a.socials__btn(href="#" aria-label="вконтакте")
+                              i.icon.icon-vk
+            .footer__right
+               .footer__info
+                  p.footer__info-title ИП Наталья Вадимовна Ринская
+               .footer__data.data
+                  ul.data__list
+                     li.data__item
+                        p.data__title Медицинская лицензия:
+                        .data__info
+                           p № Л041-01137-77/00338526
+                           p от 16 января 2020 года
+                     li.data__item
+                        p.data__title ИНН:
+                        .data__info 
+                           p 123312915054
+                     li.data__item
+                        p.data__title Р/с:
+                        .data__info 
+                           p 23001050000****
+                     li.data__item
+                        p.data__title БИК:
+                        .data__info
+                           p 044525593
+                     li.data__item
+                        p.data__title Город:
+                        .data__info
+                           p Москва
+                     li.data__item
+                        p.data__title Корр. счет:
+                        .data__info 
+                           p 1230845250000999
+         .footer__bottom
+            p.footer__copy © Центр коррекции зрения Натальи Ринской 
+            ul.footer__docs
+               li
+                  a(href="#") Политика конфиденциальности
+               li
+                  a(href="#") Договор оферты

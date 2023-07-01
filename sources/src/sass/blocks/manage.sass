@@ -1,0 +1,17 @@
+.manage
+   display: grid
+   grid-template-columns: repeat(2, 1fr)
+   grid-gap: 12px
+
+   @media screen and (max-width: 1400px)
+      .btn
+         padding: 18px 16px
+
+   @media screen and (max-width: $width_lg)
+      grid-template-columns: 1fr
+
+   @media screen and (max-width: $width_md)
+      grid-template-columns: repeat(2, 1fr)
+
+   @media screen and (max-width: $width_xs)
+      grid-template-columns: 1fr

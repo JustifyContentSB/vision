@@ -27,8 +27,8 @@
     <div class="wrapper">
       <header class="header header--index">
         <div class="header__inner header__inner--fon">
-          <div class="header__menu menu"><a class="btn-circle menu__burger" href="#menu" aria-label="открыть меню" data-fancybox><i class="icon icon-burger"></i></a>
-            <nav class="menu__nav" id="menu">
+          <div class="header__menu menu"><a class="btn-circle menu__burger" href="#" aria-label="открыть меню"><i class="icon icon-burger"></i></a>
+            <nav class="menu__nav">
               <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link btn btn--light" href="patients.html">Пациентам</a></li>
                 <li class="menu__item"><a class="menu__link btn btn--light" href="study.html">Обучение</a></li>
@@ -36,6 +36,36 @@
               </ul>
             </nav>
             <div class="menu__manage"><a class="btn menu__manage-btn" href="#form" data-fancybox>Оставить заявку</a></div>
+            <div class="menu__modal">
+              <div class="menu__modal-inner">
+                <div class="menu__modal-top">
+                  <div class="menu__modal-icon"><img src="images/elements/logo.png" alt="логотип" width="43" height="40"></div><a class="menu__modal-close btn-circle" href="#" aria-label="закрыть меню"></a>
+                </div>
+                <div class="menu__modal-body">
+                  <nav class="menu__modal-nav">
+                    <ul class="menu__modal-list">
+                      <li class="menu__modal-item"><a href="#">О нас</a></li>
+                      <li class="menu__modal-item"><a href="#">Пациентам</a></li>
+                      <li class="menu__modal-item"><a href="#">Профессионалам</a></li>
+                      <li class="menu__modal-item"><a href="#">Библиотека знаний</a></li>
+                      <li class="menu__modal-item"><a href="#">Форум</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="menu__modal-bottom">
+                  <div class="menu__modal-contacts"><a href="tel:+79670483343">+7 (967) 048 33 43</a><a href="mailto:info@rinoptica.ru">info@rinoptica.ru</a></div>
+                  <div class="menu__modal-socials">
+                    <div class="footer__contacts-socials socials">
+                      <ul class="socials__list">
+                        <li class="socials__item"><a class="socials__btn" href="#" aria-label="телеграм"><i class="icon icon-telegram"></i></a></li>
+                        <li class="socials__item"><a class="socials__btn" href="#" aria-label="инстаграм"><i class="icon icon-insta"></i></a></li>
+                        <li class="socials__item"><a class="socials__btn" href="#" aria-label="вконтакте"><i class="icon icon-vk"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <section class="header__hero hero">
             <div class="hero__inner">
@@ -45,7 +75,7 @@
               <p class="hero__cite animation">«Изменяя мир, начни с того, <br> чтобы увидеть его чётко!»</p>
               <div class="hero__bottom">
                 <p class="hero__bottom-text">Первая клиника современной оптометрии, в которой вы сможете решить <a href="#">безоперационно</a> проблемы, связанные с двоением, косоглазием, амблиопией, аккомодационными нарушениями, эксцентричной фиксацией и другими бинокулярными нарушениями</p>
-                <div class="hero__bottom-content"><img class="hero__bottom-img animation" src="images/elements/empty.gif" data-src="images/header/glasses.png" data-lazyload alt="очки" width="568" height="317"></div>
+                <div class="hero__bottom-content"><img class="hero__bottom-img animation" src="images/header/glasses.png" data-lazyload alt="очки" width="568" height="317"></div>
               </div>
             </div>
           </section>
@@ -427,6 +457,7 @@
           </form>
         </div>
       </div>
+      <div class="overlay"></div>
     </div>
     <script src="js/main.min.js"></script>
   </body>

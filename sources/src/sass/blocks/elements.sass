@@ -178,6 +178,18 @@ button.link
    &-external
       font-size: 10px
 
+.overlay
+   position: fixed
+   z-index: 990
+   left: 0
+   top: 0
+   right: 0
+   bottom: 0
+   background: rgba(#000, 0.3)
+   display: none
+   &.is-active
+      display: block
+
 @media screen and (max-width: $width_lg)
    .title
       font-size: 24px

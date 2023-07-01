@@ -27,7 +27,8 @@
          transform: translateX(80px)
          &.animated
             transform: translateX(0)
-      &--patients
+      &--patients,
+      &--study
          img
             display: none
    &__top
@@ -112,6 +113,10 @@
             padding-right: 0
          &-right
             text-align: left
+         &--study
+            img
+               display: block
+               left: 636px
       &__bottom
          margin-top: 70px
          &-content
@@ -149,6 +154,12 @@
                display: block
                left: 370px
                top: -10px
+         &--study
+            img
+               display: block
+               left: 565px
+               width: 80px
+               top: 0
       &__bottom
          margin-top: 30px
          flex-direction: column
@@ -170,6 +181,7 @@
          font-size: 16px
       &__cite
          margin-top: 90px
+      
 
    @media screen and (max-width: $width_xs)
       &__inner
@@ -183,6 +195,15 @@
                width: 56px
                left: 296px
                top: 0
+         &-pic
+            .hero__title--study &
+               display: block
+               padding-right: 220px
+         &--study
+            img
+               left: 212px
+               width: 60px
+               top: -3px
       &__cite
          font-size: 16px
       &__bottom
@@ -197,15 +218,31 @@
             font-size: 48px
 
    @media screen and (max-width: 600px)
+      &__inner
+         .header--study &
+            padding: 8px 4px
       &__title
          font-size: 28px
          margin-bottom: 28px
+         &-pic
+            .hero__title--study &
+               display: block
+               padding-right: 60px
+               word-spacing: 999px
+         &--study
+            margin-bottom: 0
+            font-size: 32px
+            img
+               left: 214px
+               width: 56px
+               top: auto
+               bottom: 5px
          &-logo
             width: 50px
             left: 97px
             top: -18px
             .hero__title--patients &
-               left: 220px
+               left: 210px
                top: -10px
          .header--patients &
             font-size: 34px
@@ -227,3 +264,6 @@
          margin-top: 138px
          font-size: 14px
          line-height: 160%
+      &__description
+         margin-top: 14px
+         font-size: 14px

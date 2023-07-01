@@ -7,6 +7,8 @@ $(document).ready(function () {
    showDropdownBlock();
    reviewsSlider();
    videosSlider();
+   menuShow();
+   menuHide();
 });
 
 // Your functions here
@@ -75,5 +77,31 @@ function videosSlider() {
            spaceBetween: 20,
          },
       },
+   });
+}
+
+function menuShow() {
+   $('.menu__burger').on('click', function(e) {
+      e.preventDefault();
+      $('.menu__modal').addClass('is-active');
+      $('.overlay').addClass('is-active');
+      $('body').addClass('is-active');
+   });
+}
+
+function menuHide() {
+   $('.menu__modal-close').on('click', function(e) {
+      e.preventDefault();
+      $('.menu__modal').removeClass('is-active');
+      $('.overlay').removeClass('is-active');
+      $('body').removeClass('is-active');
+   });
+
+   $(window).on('click', function (e) {
+      if (!e.target.closest('.menu__burger') && !e.target.closest('.menu__modal')) {
+         $('.menu__modal').removeClass('is-active');
+         $('.overlay').removeClass('is-active');
+         $('body').removeClass('is-active');
+      }
    });
 }

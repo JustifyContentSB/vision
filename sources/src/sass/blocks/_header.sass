@@ -78,12 +78,17 @@
       &__eye
          width: 460px
          right: 0
+      &__logo
+         .header--study &
+            display: none
 
    @media screen and (max-width: $width_md)
       &--study
          margin-bottom: 42px
       &--patients
          .header
+            &__menu
+               margin-bottom: 44px
             &__inner
                min-height: 700px
             &__logo
@@ -100,34 +105,42 @@
       &--patients
          .header
             &__inner
-               min-height: 560px
+               min-height: 660px
       &__inner
          padding: 12px
       &__menu
          margin-bottom: 45px
       &__natalya
          width: 280px
-         transform: translateX(0) translateY(0)
+         left: 50%
+         right: auto
+         transform: translateX(-50%) translateY(0)
+         &.animated
+            transform: translateX(-50%) translateY(0)
       &__logo
          width: 100px
          bottom: 360px
          .header--patients &
             bottom: 36px
-      &__eye
-         width: 260px
 
    @media screen and (max-width: 600px)
       &__natalya
          width: 240px
 
    @media screen and (max-width: $width_mob)
+      &--patients
+         .hero
+            &__lead
+               max-width: 264px
+               line-height: 156%
+      &--study
+         overflow: hidden
+         .header
+            &__inner
+               padding-bottom: 390px
       &__eye
-         width: 200px
-
-   @media screen and (max-width: 400px)
+         width: 302px
+         right: 10px
+         bottom: 37px
       &__natalya
-         width: 220px
-
-   @media screen and (max-width: 360px)
-      &__natalya
-         width: 190px
+         bottom: -56px 

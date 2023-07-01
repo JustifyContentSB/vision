@@ -1512,10 +1512,12 @@ template {
   --border: 1px solid var(--gray);
   --transition-duration: .2s
 }
-.footer__nav a {
+.footer__nav a,
+.menu__modal-nav a {
   position: relative
 }
-.footer__nav a::after {
+.footer__nav a::after,
+.menu__modal-nav a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1527,7 +1529,9 @@ template {
   transition: width var(--transition-duration) ease
 }
 .footer__nav a:focus::after,
-.footer__nav a:hover::after {
+.footer__nav a:hover::after,
+.menu__modal-nav a:focus::after,
+.menu__modal-nav a:hover::after {
   width: 100%;
   left: 0;
   right: auto
@@ -1581,6 +1585,9 @@ body {
   color: var(--primary);
   font-size: 16px;
   overflow-x: hidden
+}
+body.is-active {
+  overflow: hidden
 }
 a {
   text-decoration: none;
@@ -1878,6 +1885,19 @@ button.link:hover {
 .icon-external {
   font-size: 10px
 }
+.overlay {
+  position: fixed;
+  z-index: 990;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.3);
+  display: none
+}
+.overlay.is-active {
+  display: block
+}
 @media screen and (max-width:1170px) {
   .title {
     font-size: 24px
@@ -2096,6 +2116,97 @@ button.link:hover {
 .menu__manage-btn {
   font-size: 14px
 }
+.menu__modal {
+  width: 324px;
+  height: 100vh;
+  background: var(--accent);
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  color: #fff;
+  display: none
+}
+.menu__modal.is-active {
+  display: block
+}
+.menu__modal-inner {
+  height: 100%;
+  padding: 30px 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: auto
+}
+.menu__modal-top {
+  margin-bottom: 44px;
+  padding-bottom: 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,.15)
+}
+.menu__modal-close {
+  position: relative;
+  text-align: center
+}
+.menu__modal-close:focus,
+.menu__modal-close:hover {
+  background: #fff
+}
+.menu__modal-close::after {
+  content: "\e90b";
+  font-family: icomoon;
+  speak: none;
+  position: absolute;
+  top: 36%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  color: var(--accent)
+}
+.menu__modal-nav {
+  font-size: 20px;
+  font-weight: 500
+}
+.menu__modal-nav a::after {
+  background: #fff
+}
+.menu__modal-item {
+  margin-bottom: 30px
+}
+.menu__modal-bottom {
+  margin-top: auto
+}
+.menu__modal-contacts {
+  margin-bottom: 28px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 500
+}
+.menu__modal-contacts > :not(:last-child) {
+  margin-bottom: 10px
+}
+.menu__modal-contacts a {
+  white-space: nowrap
+}
+.menu__modal .socials__btn {
+  color: #fff;
+  border-color: rgba(255,255,255,.4)
+}
 @media screen and (max-width:767px) {
   .menu__nav {
     display: none;
@@ -2111,29 +2222,8 @@ button.link:hover {
   .menu__manage-btn {
     font-size: 12px
   }
-}
-@media screen and (max-width:767px) {
-  #menu.menu__nav {
-    width: calc(100% - 32px);
-    max-width: 300px;
-    padding: 48px 30px
-  }
-  #menu .menu__list {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch
-  }
-  #menu .menu__item {
-    text-align: center
-  }
-  #menu .menu__link {
-    width: 100%;
-    padding: 20px;
-    border-radius: 0;
-    text-align: center
+  .menu__modal-close::after {
+    top: 30%
   }
 }
 .header--study .hero {
@@ -2175,7 +2265,8 @@ button.link:hover {
   -webkit-transform: translateX(0);
   transform: translateX(0)
 }
-.hero__title--patients img {
+.hero__title--patients img,
+.hero__title--study img {
   display: none
 }
 .hero__top > :last-child {
@@ -2286,6 +2377,10 @@ button.link:hover {
   .hero__title-right {
     text-align: left
   }
+  .hero__title--study img {
+    display: block;
+    left: 636px
+  }
   .hero__bottom {
     margin-top: 70px
   }
@@ -2340,6 +2435,12 @@ button.link:hover {
     left: 370px;
     top: -10px
   }
+  .hero__title--study img {
+    display: block;
+    left: 565px;
+    width: 80px;
+    top: 0
+  }
   .hero__bottom {
     margin-top: 30px;
     -webkit-flex-direction: column;
@@ -2389,6 +2490,15 @@ button.link:hover {
     left: 296px;
     top: 0
   }
+  .hero__title--study .hero__title-pic {
+    display: block;
+    padding-right: 220px
+  }
+  .hero__title--study img {
+    left: 212px;
+    width: 60px;
+    top: -3px
+  }
   .hero__cite {
     font-size: 16px
   }
@@ -2407,9 +2517,27 @@ button.link:hover {
   }
 }
 @media screen and (max-width:600px) {
+  .header--study .hero__inner {
+    padding: 8px 4px
+  }
   .hero__title {
     font-size: 28px;
     margin-bottom: 28px
+  }
+  .hero__title--study .hero__title-pic {
+    display: block;
+    padding-right: 60px;
+    word-spacing: 999px
+  }
+  .hero__title--study {
+    margin-bottom: 0;
+    font-size: 32px
+  }
+  .hero__title--study img {
+    left: 214px;
+    width: 56px;
+    top: auto;
+    bottom: 5px
   }
   .hero__title-logo {
     width: 50px;
@@ -2417,7 +2545,7 @@ button.link:hover {
     top: -18px
   }
   .hero__title--patients .hero__title-logo {
-    left: 220px;
+    left: 210px;
     top: -10px
   }
   .header--patients .hero__title {
@@ -2446,6 +2574,10 @@ button.link:hover {
     margin-top: 138px;
     font-size: 14px;
     line-height: 160%
+  }
+  .hero__description {
+    margin-top: 14px;
+    font-size: 14px
   }
 }
 .header {
@@ -2560,10 +2692,16 @@ button.link:hover {
     width: 460px;
     right: 0
   }
+  .header--study .header__logo {
+    display: none
+  }
 }
 @media screen and (max-width:991px) {
   .header--study {
     margin-bottom: 42px
+  }
+  .header--patients .header__menu {
+    margin-bottom: 44px
   }
   .header--patients .header__inner {
     min-height: 700px
@@ -2581,7 +2719,7 @@ button.link:hover {
     padding-bottom: 460px
   }
   .header--patients .header__inner {
-    min-height: 560px
+    min-height: 660px
   }
   .header__inner {
     padding: 12px
@@ -2591,8 +2729,14 @@ button.link:hover {
   }
   .header__natalya {
     width: 280px;
-    -webkit-transform: translateX(0) translateY(0);
-    transform: translateX(0) translateY(0)
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0)
+  }
+  .header__natalya.animated {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0)
   }
   .header__logo {
     width: 100px;
@@ -2601,9 +2745,6 @@ button.link:hover {
   .header--patients .header__logo {
     bottom: 36px
   }
-  .header__eye {
-    width: 260px
-  }
 }
 @media screen and (max-width:600px) {
   .header__natalya {
@@ -2611,18 +2752,23 @@ button.link:hover {
   }
 }
 @media screen and (max-width:560px) {
+  .header--patients .hero__lead {
+    max-width: 264px;
+    line-height: 156%
+  }
+  .header--study {
+    overflow: hidden
+  }
+  .header--study .header__inner {
+    padding-bottom: 390px
+  }
   .header__eye {
-    width: 200px
+    width: 302px;
+    right: 10px;
+    bottom: 37px
   }
-}
-@media screen and (max-width:400px) {
   .header__natalya {
-    width: 220px
-  }
-}
-@media screen and (max-width:360px) {
-  .header__natalya {
-    width: 190px
+    bottom: -56px
   }
 }
 .main {
@@ -4299,6 +4445,9 @@ input:checked ~ .form__agree-checkbox::after {
     padding: 13px 12px;
     padding-right: 62px;
     line-height: 120%
+  }
+  .faq__answer {
+    padding: 0 12px 13px
   }
 }
 .section--faq {

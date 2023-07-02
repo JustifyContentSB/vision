@@ -1510,7 +1510,8 @@ template {
   --hover-color: #1E90FF;
   --radius: 40px;
   --border: 1px solid var(--gray);
-  --transition-duration: .2s
+  --transition-duration: .2s;
+  --gradient: linear-gradient(110deg, #A7C3E7, #C6D8EF, #A7C3E7, #B8CFED, #CAE0FE, #D4E7FF, #B8D7FF)
 }
 .footer__nav a,
 .menu__modal-nav a {
@@ -2066,12 +2067,18 @@ button.link:hover {
   position: fixed;
   background: var(--accent)
 }
-.menu.fixed .menu__inner a {
+.menu.fixed .menu__burger,
+.menu.fixed .menu__manage a,
+.menu.fixed .menu__nav a {
   background: #fff;
   color: var(--primary)
 }
-.menu.fixed .menu__inner a:focus,
-.menu.fixed .menu__inner a:hover {
+.menu.fixed .menu__burger:focus,
+.menu.fixed .menu__burger:hover,
+.menu.fixed .menu__manage a:focus,
+.menu.fixed .menu__manage a:hover,
+.menu.fixed .menu__nav a:focus,
+.menu.fixed .menu__nav a:hover {
   color: var(--accent);
   background: #fff
 }
@@ -2308,7 +2315,7 @@ button.link:hover {
 }
 .header--blue .header__inner {
   padding-top: 115px;
-  background: linear-gradient(#a7c3e7,#cae0fe,#d4e7ff,#b8d7ff)
+  background: linear-gradient(110deg,#a7c3e7,#cae0fe,#d4e7ff,#b8d7ff)
 }
 .header__title {
   font-size: 84px;
@@ -3322,7 +3329,7 @@ main .section:last-child {
 }
 .feedback__grid {
   padding: 20px 20px 15px;
-  background: linear-gradient(#a7c3e7,#c6d8ef,#a7c3e7,#b8cfed,#cae0fe,#d4e7ff,#b8d7ff);
+  background: var(--gradient);
   border-radius: var(--radius);
   overflow: hidden;
   grid-gap: 20px;
@@ -4270,6 +4277,13 @@ input:checked ~ .form__agree-checkbox::after {
   display: none;
   line-height: 150%
 }
+.faq__answer a {
+  color: var(--accent)
+}
+.faq__answer a:focus,
+.faq__answer a:hover {
+  text-decoration: underline
+}
 @media screen and (max-width:1170px) {
   .faq__inner {
     padding: 50px 20px;
@@ -4337,7 +4351,7 @@ input:checked ~ .form__agree-checkbox::after {
 }
 .about__inner {
   padding: 0 38px 0 46px;
-  background: linear-gradient(#a7c3e7,#c6d8ef,#a7c3e7,#b8cfed,#cae0fe,#d4e7ff,#b8d7ff);
+  background: var(--gradient);
   color: #fff;
   border-radius: var(--radius);
   overflow: hidden

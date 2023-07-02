@@ -13,14 +13,15 @@
       position: fixed
       background: var(--accent)
       .menu
-         &__inner
-            a
+         &__burger,
+         &__nav a,
+         &__manage a
+            background: #fff
+            color: var(--primary)
+            &:hover,
+            &:focus
+               color: var(--accent)
                background: #fff
-               color: var(--primary)
-               &:hover,
-               &:focus
-                  color: var(--accent)
-                  background: #fff
    &__inner
       width: 100%
       max-width: 1400px

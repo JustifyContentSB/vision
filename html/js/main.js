@@ -9,6 +9,7 @@ $(document).ready(function () {
   videosSlider();
   menuShow();
   menuHide();
+  scrollHeaderMenu();
 });
 
 // Your functions here
@@ -94,5 +95,12 @@ function menuHide() {
       $('.overlay').removeClass('is-active');
       $('body').removeClass('is-active');
     }
+  });
+}
+function scrollHeaderMenu() {
+  $(window).scroll(function () {
+    var menu = $('.menu'),
+      scroll = $(window).scrollTop();
+    if (scroll >= 20) menu.addClass('fixed');else menu.removeClass('fixed');
   });
 }

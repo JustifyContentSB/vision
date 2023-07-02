@@ -1,138 +1,250 @@
 .header
-   margin-bottom: 100px
+   margin-bottom: 70px
+   font-size: 18px
+   line-height: 150%
    &--index
-      margin-bottom: 35px
-   &--study
-      margin-bottom: 70px
-   &--patients
+      margin-bottom: 32px
+   &--blue
+      margin-bottom: 100px
       color: #fff
+   &__main
+      position: relative
+      z-index: 1
+      .header--study &
+         padding-right: 440px
    &__inner
-      min-height: 781px
-      padding: 16px
-      background: rgba(lightgray, 50%)
+      min-height: 780px
+      padding: 36px
+      padding-top: 130px
+      background: rgba(lightgray, 50%) url('../images/header/index-fon.png') no-repeat center / cover
       border-radius: var(--radius)
       position: relative
-      &--fon
-         background-image: url('../images/header/index-fon.png')
-         background-repeat: no-repeat
-         background-size: cover
-         background-position: center
+      display: flex
+      flex-direction: column
       .header--index &
          min-height: 662px
-      .header--patients &
+      .header--blue &
+         padding-top: 115px
          background: linear-gradient(#A7C3E7, #CAE0FE, #D4E7FF, #B8D7FF)
          @extend %section-lines
-   &__menu
-      margin-bottom: 40px
-      .header--patients &
-         margin-bottom: 22px
-   &__natalya
-      width: 414px
-      position: absolute
-      bottom: 0
-      right: 58px
+   &__title
+      font-size: 84px
+      line-height: 122%
+      font-weight: 400
+      &--large
+         font-size: 120px
+      &-lead
+         &__logo
+            display: none
+      &-pic
+         display: flex
+         align-items: center
+      &-logo
+         margin-left: 19px
+         flex-shrink: 0
+         position: relative
+         top: -4px
+      &-colour
+         color: var(--accent)
+         .header--index &
+            padding-right: 25px
+            text-align: right
+   &__cite
+      max-width: 420px
+      margin-top: -72px
+      font-size: 24px
+      line-height: 120%
+      font-weight: 500
+   &__bottom
+      margin-top: 170px
       display: flex
-      justify-content: flex-end
-      img
+      align-items: center
+      justify-content: space-between
+      &-text
+         max-width: 548px
+         padding-right: 30px
+         flex-shrink: 0
+         b
+            color: var(--accent)
+      &-glasses
+         max-width: 640px
+         position: relative
+         top: 10px
+         right: -6px
+         height: 134px
+         flex-grow: 1
+         img
+            width: 100%
+            max-width: 640px
+            height: auto
+            position: absolute
+            left: 0
+            top: -180px
+   &__text
+      max-width: 737px
+      margin-top: 22px
+      .header--blue &
+         margin-top: 10px
+         max-width: 585px
+   &__images
+      height: 310px
+      flex-grow: 1
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+      position: relative
+      z-index: 1
+      &-natalya
          width: 414px
-         height: auto
-   &__logo
-      width: 154px
-      position: absolute
-      z-index: 1
-      bottom: 36px
-      left: 36px
-      transition: transform .2s ease
-   &__eye
-      width: 585px
-      position: absolute
-      z-index: 1
-      right: 77px
-      bottom: 25px
-      transition: opacity .2s ease
-      img
-         width: 100%
+         margin-left: auto
+         position: relative
+         bottom: -36px
+         right: 23px
+      &-eye
+         width: 590px
+         margin-left: auto
+         position: relative
+         right: 44px
+         top: 17px 
+
+   @media screen and (max-width: 1400px)
+      &__title
+         font-size: 74px
+         &-colour
+            .header--index &
+               padding-right: 100px
+
+   @media screen and (max-width: 1320px)
+      &__main
+         .header--study &
+            padding-right: 350px
+      &__images
+         &-natalya
+            width: 350px
 
    @media screen and (max-width: 1280px)
-      margin-bottom: 62px
-      &--index
-         margin-bottom: 42px
-      &--study
-         margin-bottom: 30px
-      &__natalya
-         width: 340px
-
-   @media screen and (max-width: $width_lg)
-      &__inner
-         min-height: 750px
-         .header--index &
-            min-height: 500px
-      &__natalya
-         width: 300px
-      &__eye
-         width: 460px
-         right: 0
-      &__logo
+      &--blue
+         margin-bottom: 70px
+      &__title
+         font-size: calcFluidFontSize(28, 70, 360, 1280, px)
          .header--study &
-            display: none
+            font-size: calcFluidFontSize(30, 70, 360, 1280, px)
+         &-colour
+            .header--index &
+               padding-right: 0
+               text-align: left
+      &__bottom
+         margin-top: 30px
+         flex-direction: column
+         align-items: flex-start
+         &-text
+            max-width: 100%
+            padding-right: 0
+         &-glasses
+            width: 100%
+            max-width: 100%
+            height: 350px
+            top: 0
+            right: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+               position: relative
+               top: 0
+               left: auto
+      &__cite
+         margin-top: 20px
+         order: 1
+      &__main
+         .header--study &
+            padding-right: 0
+      &__images
+         height: auto
+         &-natalya
+            width: 250px
 
    @media screen and (max-width: $width_md)
-      &--study
-         margin-bottom: 42px
-      &--patients
-         .header
-            &__menu
-               margin-bottom: 44px
-            &__inner
-               min-height: 700px
+      &__inner
+         min-height: 600px
+      &__title
+         &-logo
+            display: none
+         &-lead
+            &__bottom
+               display: block
+            &__top
+               display: flex
+               align-items: center
             &__logo
-               display: none
-      &__eye
-         width: 360px
-         opacity: 1
+               display: block
+               margin-left: 20px
+               width: 70px
+               height: auto
+      &__cite
+         font-size: calcFluidFontSize(14, 24, 360, 991, px)
+      &__images
+         margin-top: 54px
+         .header--blue &
+            margin-top: 44px
+         &-logo
+            display: none
+         &-natalya
+            margin-right: auto
+            right: auto
 
    @media screen and (max-width: $width_xs)
-      &--study
-         .header
-            &__inner
-               padding-bottom: 460px
-      &--patients
-         .header
-            &__inner
-               min-height: 660px
+      font-size: 16px
+      &--blue
+         margin-bottom: 55px
       &__inner
-         padding: 12px
-      &__menu
-         margin-bottom: 45px
-      &__natalya
-         width: 280px
-         left: 50%
-         transform: translateX(-50%)
-         right: auto
-      &__logo
-         width: 100px
-         bottom: 360px
-         .header--patients &
-            bottom: 36px
-
-   @media screen and (max-width: 600px)
-      &__natalya
-         width: 240px
+         padding: 20px
+         padding-top: 117px
+      &__images
+         &-natalya
+            bottom: -20px
+         &-eye
+            width: 100%
+            max-width: 300px
+            margin-right: auto
+            right: auto
+            left: auto
+            top: 0
 
    @media screen and (max-width: $width_mob)
-      &--patients
-         .hero
-            &__lead
-               max-width: 264px
-               line-height: 156%
-      &--study
-         overflow: hidden
-         .header
-            &__inner
-               padding-bottom: 390px
-      &__eye
-         width: 302px
-         right: 10px
-         bottom: 37px
-      &__natalya
-         bottom: -56px 
+      margin-bottom: 44px
+      font-size: 14px
+      line-height: 158%
+      &--blue
+         margin-bottom: 65px
+      &__inner
+         padding-top: 110px
+      &__bottom
+         margin-top: 17px
+         &-glasses
+            height: auto
+            justify-content: flex-end
+            img
+               top: 6px
+               left: 25px
+      &__title
+         line-height: 112%
+         &--large
+            font-size: 34px
+         &-lead
+            &__logo
+               width: 50px
+               margin-left: 10px
+               position: relative
+               top: -10px
+      &__cite
+         margin-top: 0
+      &__text
+         .header--blue &
+            padding-right: 40px
+      &__images
+         &-natalya
+            height: 320px
+            overflow: hidden
+         &-eye
+            top: -20px

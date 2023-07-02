@@ -1,62 +1,69 @@
 header.header.header--index
-   .header__inner.header__inner--fon
+   .header__inner
       .header__menu.menu
-         a.btn-circle.menu__burger(href="#" aria-label="открыть меню")
-            i.icon.icon-burger
-         nav.menu__nav
-            ul.menu__list
-               li.menu__item
-                  a.menu__link.btn.btn--light(href="patients.html") Пациентам
-               li.menu__item
-                  a.menu__link.btn.btn--light(href="study.html") Обучение
-               li.menu__item
-                  a.menu__link.btn.btn--light(href="index.html") Контакты
-         .menu__manage
-            a.btn.menu__manage-btn(href="#form" data-fancybox) Оставить заявку
-         .menu__modal
-            .menu__modal-inner
-               .menu__modal-top
-                  .menu__modal-icon
-                     img(src="images/elements/logo.png", alt="логотип" width="43" height="40")
-                  a.menu__modal-close.btn-circle(href="#" aria-label="закрыть меню")
-               .menu__modal-body
-                  nav.menu__modal-nav
-                     ul.menu__modal-list
-                        li.menu__modal-item
-                           a(href="#") О нас
-                        li.menu__modal-item
-                           a(href="#") Пациентам
-                        li.menu__modal-item
-                           a(href="#") Профессионалам
-                        li.menu__modal-item
-                           a(href="#") Библиотека знаний
-                        li.menu__modal-item
-                           a(href="#") Форум
-               .menu__modal-bottom
-                  .menu__modal-contacts
-                     a(href="tel:+79670483343") +7 (967) 048 33 43
-                     a(href="mailto:info@rinoptica.ru") info@rinoptica.ru
-                  .menu__modal-socials
-                     .footer__contacts-socials.socials
-                        ul.socials__list
-                           li.socials__item
-                              a.socials__btn(href="#" aria-label="телеграм")
-                                 i.icon.icon-telegram
-                           li.socials__item
-                              a.socials__btn(href="#" aria-label="инстаграм")
-                                 i.icon.icon-insta
-                           li.socials__item
-                              a.socials__btn(href="#" aria-label="вконтакте")
-                                 i.icon.icon-vk
-      section.header__hero.hero
-         .hero__inner
-            .hero__top
-               h1.hero__title
-                  span.hero__title-pic Центр #[br] коррекции зрения #[img.hero__title-logo(src="images/elements/logo.png", alt="логотип" width="95" height="88")]
-                  span.hero__title-colour.hero__title-right Натальи Ринской
-            p.hero__cite «Изменяя мир, начни с того, #[br] чтобы увидеть его чётко!»
-            .hero__bottom
-               p.hero__bottom-text.
-                  Первая клиника современной оптометрии, в которой вы сможете решить #[a(href="#") безоперационно] проблемы, связанные с двоением, косоглазием, амблиопией, аккомодационными нарушениями, эксцентричной фиксацией и другими бинокулярными нарушениями
-               .hero__bottom-content
-                  img.hero__bottom-img(src="images/header/glasses.png", data-lazyload, alt="очки" width="568" height="317")
+         .menu__inner
+            a.btn-circle.menu__burger(href="#" aria-label="открыть меню")
+               i.icon.icon-burger
+            nav.menu__nav
+               ul.menu__list
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="patients.html") Пациентам
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="study.html") Обучение
+                  li.menu__item
+                     a.menu__link.btn.btn--light(href="index.html") Контакты
+            .menu__manage
+               a.btn.menu__manage-btn(href="#form" data-fancybox) Оставить заявку
+            .menu__modal
+               .menu__modal-inner
+                  .menu__modal-top
+                     .menu__modal-icon
+                        img(src="images/elements/logo.png", alt="логотип" width="43" height="40")
+                     a.menu__modal-close.btn-circle(href="#" aria-label="закрыть меню")
+                  .menu__modal-body
+                     nav.menu__modal-nav
+                        ul.menu__modal-list
+                           li.menu__modal-item
+                              a(href="#") О нас
+                           li.menu__modal-item
+                              a(href="#") Пациентам
+                           li.menu__modal-item
+                              a(href="#") Профессионалам
+                           li.menu__modal-item
+                              a(href="#") Библиотека знаний
+                           li.menu__modal-item
+                              a(href="#") Форум
+                  .menu__modal-bottom
+                     .menu__modal-contacts
+                        a(href="tel:+79670483343") +7 (967) 048 33 43
+                        a(href="mailto:info@rinoptica.ru") info@rinoptica.ru
+                     .menu__modal-socials
+                        .footer__contacts-socials.socials
+                           ul.socials__list
+                              li.socials__item
+                                 a.socials__btn(href="#" aria-label="телеграм")
+                                    i.icon.icon-telegram
+                              li.socials__item
+                                 a.socials__btn(href="#" aria-label="инстаграм")
+                                    i.icon.icon-insta
+                              li.socials__item
+                                 a.socials__btn(href="#" aria-label="вконтакте")
+                                    i.icon.icon-vk
+
+      .header__main
+         h1.header__title
+            div.header__title-pic
+               div.header__title-lead
+                  span.header__title-lead__top
+                     span Центр 
+                     img.header__title-lead__logo(src="images/elements/logo.png" width="50" height="46")
+                  span.header__title-lead__bottom.
+                     коррекции зрения
+               img.header__title-logo(src="images/elements/logo.png" width="95" height="88")
+            div.header__title-colour Натальи Ринской
+      p.header__cite «Изменяя мир, начни с того, #[br] чтобы увидеть его чётко!»
+      
+      .header__bottom
+         p.header__bottom-text Первая клиника современной оптометрии, в которой вы сможете решить #[b безоперационно] проблемы, связанные с двоением, косоглазием, амблиопией, аккомодационными нарушениями, эксцентричной фиксацией и другими бинокулярными нарушениями
+         div.header__bottom-glasses
+            img(src="images/header/glasses.png", alt="очки" width="640" height="490")

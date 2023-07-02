@@ -2,67 +2,72 @@ extends base/_layout
 block head
    title Пациентам
 block header
-   header.header.header--patients
+   header.header.header--blue
       .header__inner
          .header__menu.menu
-            a.btn-circle.menu__burger(href="#" aria-label="открыть меню")
-               i.icon.icon-burger
-            nav.menu__nav
-               ul.menu__list
-                  li.menu__item
-                     a.menu__link.btn.btn--light(href="patients.html") Пациентам
-                  li.menu__item
-                     a.menu__link.btn.btn--light(href="study.html") Обучение
-                  li.menu__item
-                     a.menu__link.btn.btn--light(href="index.html") Контакты
-            .menu__manage
-               a.btn.menu__manage-btn(href="#form" data-fancybox) Оставить заявку
-            .menu__modal
-               .menu__modal-inner
-                  .menu__modal-top
-                     .menu__modal-icon
-                        img(src="images/elements/logo.png", alt="логотип" width="43" height="40")
-                     a.menu__modal-close.btn-circle(href="#" aria-label="закрыть меню")
-                  .menu__modal-body
-                     nav.menu__modal-nav
-                        ul.menu__modal-list
-                           li.menu__modal-item
-                              a(href="#") О нас
-                           li.menu__modal-item
-                              a(href="#") Пациентам
-                           li.menu__modal-item
-                              a(href="#") Профессионалам
-                           li.menu__modal-item
-                              a(href="#") Библиотека знаний
-                           li.menu__modal-item
-                              a(href="#") Форум
-                  .menu__modal-bottom
-                     .menu__modal-contacts
-                        a(href="tel:+79670483343") +7 (967) 048 33 43
-                        a(href="mailto:info@rinoptica.ru") info@rinoptica.ru
-                     .menu__modal-socials
-                        .footer__contacts-socials.socials
-                           ul.socials__list
-                              li.socials__item
-                                 a.socials__btn(href="#" aria-label="телеграм")
-                                    i.icon.icon-telegram
-                              li.socials__item
-                                 a.socials__btn(href="#" aria-label="инстаграм")
-                                    i.icon.icon-insta
-                              li.socials__item
-                                 a.socials__btn(href="#" aria-label="вконтакте")
-                                    i.icon.icon-vk
-         section.header__hero.hero
-            .hero__inner
-               .hero__top
-                  h1.hero__title.hero__title--patients
-                     span.hero__title-pic.
-                        Пациентам #[img.hero__title-logo(src="images/elements/logo.png", alt="логотип" width="95" height="88")]
-                  p.hero__lead В нашей клинике оказывается полный спектр услуг, связанных с выявлением и коррекцией зрительных нарушений, в том числе бинокулярных
-         .header__logo
-            img(src="images/elements/logo.png", alt="логотип" width="154")
-         .header__eye
-            img(src="images/header/eye.png", alt="глаз" width="517" height="586")
+            .menu__inner
+               a.btn-circle.menu__burger(href="#" aria-label="открыть меню")
+                  i.icon.icon-burger
+               nav.menu__nav
+                  ul.menu__list
+                     li.menu__item
+                        a.menu__link.btn.btn--light(href="patients.html") Пациентам
+                     li.menu__item
+                        a.menu__link.btn.btn--light(href="study.html") Обучение
+                     li.menu__item
+                        a.menu__link.btn.btn--light(href="index.html") Контакты
+               .menu__manage
+                  a.btn.menu__manage-btn(href="#form" data-fancybox) Оставить заявку
+               .menu__modal
+                  .menu__modal-inner
+                     .menu__modal-top
+                        .menu__modal-icon
+                           img(src="images/elements/logo.png", alt="логотип" width="43" height="40")
+                        a.menu__modal-close.btn-circle(href="#" aria-label="закрыть меню")
+                     .menu__modal-body
+                        nav.menu__modal-nav
+                           ul.menu__modal-list
+                              li.menu__modal-item
+                                 a(href="#") О нас
+                              li.menu__modal-item
+                                 a(href="#") Пациентам
+                              li.menu__modal-item
+                                 a(href="#") Профессионалам
+                              li.menu__modal-item
+                                 a(href="#") Библиотека знаний
+                              li.menu__modal-item
+                                 a(href="#") Форум
+                     .menu__modal-bottom
+                        .menu__modal-contacts
+                           a(href="tel:+79670483343") +7 (967) 048 33 43
+                           a(href="mailto:info@rinoptica.ru") info@rinoptica.ru
+                        .menu__modal-socials
+                           .footer__contacts-socials.socials
+                              ul.socials__list
+                                 li.socials__item
+                                    a.socials__btn(href="#" aria-label="телеграм")
+                                       i.icon.icon-telegram
+                                 li.socials__item
+                                    a.socials__btn(href="#" aria-label="инстаграм")
+                                       i.icon.icon-insta
+                                 li.socials__item
+                                    a.socials__btn(href="#" aria-label="вконтакте")
+                                       i.icon.icon-vk
+
+         .header__main
+            h1.header__title.header__title--large
+               div.header__title-pic
+                  div.header__title-lead
+                     span.header__title-lead__top
+                        span Пациентам
+                        img.header__title-lead__logo(src="images/elements/logo.png" width="50" height="46")
+            p.header__text В нашей клинике оказывается полный спектр услуг, связанных с выявлением и коррекцией зрительных нарушений, в том числе бинокулярных
+
+         .header__images
+            .header__images-logo
+               img(src="images/elements/logo.png", alt="логотип" width="154" height="143")
+            .header__images-eye
+               img(src="images/header/eye.png", alt="Глаз" width="590" height="651")
 
 block page
    main.main
@@ -77,7 +82,8 @@ block page
                      li.services__item
                         .services__info
                            .services__top
-                              h3.services__title Подбор призматической коррекции
+                              a.services__btn(href="#modal-info" data-fancybox)
+                                 h3.services__title Подбор призматической коррекции
                            .services__bottom
                               a.btn-circle(href="#" aria-label="перейти на страницу услуги") #[i.icon.icon-external]
                               a.btn-info(href="#") #[i.icon.icon-info] Подробнее
@@ -86,7 +92,8 @@ block page
                      li.services__item
                         .services__info
                            .services__top
-                              h3.services__title Курс развития зрительных функций
+                              a.services__btn(href="#modal-description" data-fancybox)
+                                 h3.services__title Курс развития зрительных функций
                            .services__bottom
                               a.btn-circle(href="#" aria-label="перейти на страницу услуги") #[i.icon.icon-external]
                               a.btn-info(href="#") #[i.icon.icon-info] Подробнее
@@ -95,7 +102,8 @@ block page
                      li.services__item
                         .services__info
                            .services__top
-                              h3.services__title Цветокоррекция
+                              a.services__btn(href="#modal-medication" data-fancybox)
+                                 h3.services__title Цветокоррекция
                            .services__bottom
                               a.btn-circle(href="#" aria-label="перейти на страницу услуги") #[i.icon.icon-external]
                               a.btn-info(href="#") #[i.icon.icon-info] Подробнее
@@ -105,7 +113,7 @@ block page
                   .services__description
                      p.services__description-text.
                         Чтобы ознакомиться с ценами нажмите на кнопку ниже
-                     a.services__description-btn.btn(href="#") Стоимость
+                     a.services__description-btn.btn(href="#modal-price" data-fancybox) Стоимость
 
       section.section.section--optics.section--large
          .section__wrapper
@@ -121,7 +129,7 @@ block page
                               h2.optics__title.title.title--big Оптика
                               p Помимо подбора коррекции зрения любой сложности в нашей клинике вы сможете заказать изготовление очков по выписанному рецепту.
                               p #[b Чтобы ознакомиться с ценами нажмите на кнопку ниже]
-                           a.optics__btn.btn(href="#") Стоимость
+                           a.optics__btn.btn(href="#modal-table" data-fancybox) Стоимость
 
       section.section.section--about
          .section__wrapper
@@ -333,3 +341,24 @@ block page
                            span.faq__btn-text Форум с частозадаваемыми вопросами от пациентов
                         .faq__answer
                            p Замечательный медицинский центр. Были на приёме у Дари Георгиевны. Отличный специалист, очень внимательно провела обследование, выявила отклонения и предложила варианты коррекции. Очень приятный доктор, невероятно чуткий и деликатный специалист. Приём длился больше часа, исследовала зрение всеми возможными способами, пожалуй нигде не встречала такого внимательного подхода.
+
+      section.section.section--gallery
+         .section__header.visually-hidden
+            h2.section__title Галерея фотографий
+         .section__wrapper
+            .gallery
+               .gallery__list
+                  .gallery__list-column
+                     img.gallery__img(src="images/gallery/gallery-01.jpg", alt="фотография" width="244" height="244")
+                     img.gallery__img(src="images/gallery/gallery-02.jpg", alt="фотография" width="150" height="244")
+                     img.gallery__img(src="images/gallery/gallery-03.jpg", alt="фотография" width="300" height="244")
+                     img.gallery__img(src="images/gallery/gallery-04.jpg", alt="фотография" width="195" height="244")
+                     img.gallery__img(src="images/gallery/gallery-05.jpg", alt="фотография" width="300" height="244")
+                     img.gallery__img(src="images/gallery/gallery-06.jpg", alt="фотография" width="345" height="244")
+                  .gallery__list-column
+                     img.gallery__img(src="images/gallery/gallery-07.jpg", alt="фотография" width="300" height="244")
+                     img.gallery__img(src="images/gallery/gallery-08.jpg", alt="фотография" width="351" height="244")
+                     img.gallery__img(src="images/gallery/gallery-09.jpg", alt="фотография" width="300" height="244")
+                     img.gallery__img(src="images/gallery/gallery-10.jpg", alt="фотография" width="150" height="244")
+                     img.gallery__img(src="images/gallery/gallery-11.jpg", alt="фотография" width="285" height="244")
+                     img.gallery__img(src="images/gallery/gallery-12.jpg", alt="фотография" width="225" height="244")

@@ -1,0 +1,46 @@
+.gallery
+   margin: 0 -20px
+   overflow: hidden
+   background: var(--sectionBg)
+   &__list
+      padding-top: 92px
+      border-radius: 40px
+      background: #fff
+      &-column
+         margin-bottom: 12px
+         display: flex
+         justify-content: center
+         &:last-child
+            margin-bottom: 0
+   &__img
+      border-radius: 32px
+      margin: 0 6px
+      width: auto
+      height: 244px
+
+   @media screen and (max-width: $width_lg)
+      &__list
+         padding-top: 50px
+
+   @media screen and (max-width: $width_xs)
+      margin: 0 -16px
+      &__list
+         padding-top: 44px
+      &__img
+         width: auto
+         height: 180px
+
+   @media screen and (max-width: $width_mob)
+      &__img
+         height: 130px
+         border-radius: 12px
+
+   @media screen and (max-width: 400px)
+      &__img
+         height: 91px
+         margin: 0 3px
+      &__list
+         &-column
+            margin-bottom: 6px
+            &:nth-child(2)
+               margin-right: 40px

@@ -1538,12 +1538,12 @@ template {
 }
 .about__inner,
 .feedback__grid,
-.header--patients .header__inner {
+.header--blue .header__inner {
   position: relative
 }
 .about__inner::after,
 .feedback__grid::after,
-.header--patients .header__inner::after {
+.header--blue .header__inner::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2051,12 +2051,46 @@ button.link:hover {
   right: 8px
 }
 .menu {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: position .3s ease;
+  position: absolute;
+  background: 0 0;
+  transition: background .3s ease
+}
+.menu.fixed {
+  padding: 0 20px;
+  position: fixed;
+  background: var(--accent)
+}
+.menu.fixed .menu__inner a {
+  background: #fff;
+  color: var(--primary)
+}
+.menu.fixed .menu__inner a:focus,
+.menu.fixed .menu__inner a:hover {
+  color: var(--accent);
+  background: #fff
+}
+.menu__inner {
+  width: 100%;
+  max-width: 1400px;
+  padding: 16px;
+  margin: 0 auto;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  overflow: hidden;
+  background: 0 0
 }
 .menu__burger {
   width: 55px;
@@ -2076,16 +2110,21 @@ button.link:hover {
   border-radius: 100px;
   overflow: hidden
 }
+.menu__item .btn {
+  padding: 13px 14px
+}
 .menu__item:not(:first-child):not(:last-child) .btn {
   border-radius: 0
 }
 .menu__item:first-child .btn {
-  padding: 17px 14px 17px 24px;
+  padding-right: 14px;
+  padding-left: 24px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0
 }
 .menu__item:last-child .btn {
-  padding: 17px 24px 17px 14px;
+  padding-right: 24px;
+  padding-left: 14px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0
 }
@@ -2109,6 +2148,7 @@ button.link:hover {
   margin-left: auto
 }
 .menu__manage-btn {
+  padding: 13px 28px;
   font-size: 14px
 }
 .menu__modal {
@@ -2151,6 +2191,9 @@ button.link:hover {
   border-bottom: 1px solid rgba(255,255,255,.15)
 }
 .menu__modal-close {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
   position: relative;
   text-align: center
 }
@@ -2163,7 +2206,7 @@ button.link:hover {
   font-family: icomoon;
   speak: none;
   position: absolute;
-  top: 36%;
+  top: 16%;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   color: var(--accent)
@@ -2203,12 +2246,18 @@ button.link:hover {
   border-color: rgba(255,255,255,.4)
 }
 @media screen and (max-width:767px) {
+  .menu.fixed {
+    padding: 0 16px
+  }
   .menu__nav {
     display: none;
     border-radius: var(--radius)
   }
 }
 @media screen and (max-width:560px) {
+  .menu__inner {
+    padding: 12px
+  }
   .menu__burger {
     width: 53px;
     min-width: 53px;
@@ -2221,511 +2270,359 @@ button.link:hover {
     top: 30%
   }
 }
-.header--study .hero {
-  max-width: 910px
-}
-.hero__inner {
-  padding: 20px
-}
-.hero__title {
-  font-weight: 400;
-  font-size: 84px;
-  line-height: 120%
-}
-.hero__title-colour {
-  display: block;
-  color: var(--accent)
-}
-.hero__title-right {
-  padding-right: 26px;
-  text-align: right;
-  display: block
-}
-.hero__title-pic {
-  position: relative
-}
-.hero__title-pic br {
-  display: none
-}
-.hero__title-logo {
-  display: inline-block;
-  width: 95px;
-  position: absolute;
-  left: calc(100% + 20px);
-  top: 0
-}
-.hero__title--patients img,
-.hero__title--study img {
-  display: none
-}
-.hero__top > :last-child {
-  margin-bottom: 0
-}
-.hero__cite {
-  width: 100%;
-  max-width: 417px;
-  margin-top: -71px;
-  font-size: 24px;
-  line-height: 120%;
-  font-weight: 500
-}
-.hero__lead {
-  width: 100%;
-  max-width: 585px;
+.header {
+  margin-bottom: 70px;
   font-size: 18px;
-  line-height: 140%
+  line-height: 150%
 }
-.hero__bottom {
-  margin-top: 166px;
+.header--index {
+  margin-bottom: 32px
+}
+.header--blue {
+  margin-bottom: 100px;
+  color: #fff
+}
+.header__main {
+  position: relative;
+  z-index: 1
+}
+.header--study .header__main {
+  padding-right: 440px
+}
+.header__inner {
+  min-height: 780px;
+  padding: 36px;
+  padding-top: 130px;
+  background: rgba(211,211,211,.5) url(../images/header/index-fon.png) no-repeat center/cover;
+  border-radius: var(--radius);
+  position: relative;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between
-}
-.hero__bottom-text {
-  max-width: 518px;
-  font-size: 18px;
-  line-height: 155%
-}
-.hero__bottom-text a {
-  font-weight: 700;
-  color: var(--accent)
-}
-.hero__bottom-content {
-  width: 635px;
-  position: relative
-}
-.hero__bottom-img {
-  width: 100%;
-  position: absolute;
-  top: -160px;
-  right: -6px
-}
-.hero__description {
-  margin-top: 24px;
-  max-width: 724px;
-  font-size: 18px;
-  line-height: 152%
-}
-.header--patients .hero__top {
-  max-width: 800px
-}
-.header--patients .hero__title {
-  margin-bottom: 10px;
-  font-size: 120px
-}
-@media screen and (max-width:1600px) {
-  .hero__bottom-img {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px)
-  }
-}
-@media screen and (max-width:1365px) {
-  .hero__title {
-    margin-bottom: 20px;
-    font-size: 68px
-  }
-  .hero__title-colour {
-    padding-right: 60px
-  }
-  .hero__cite {
-    margin-top: 0
-  }
-  .header--patients .hero__title {
-    font-size: 100px
-  }
-}
-@media screen and (max-width:1170px) {
-  .hero__title {
-    font-size: 60px
-  }
-  .hero__title-pic br {
-    display: inline
-  }
-  .hero__title-logo {
-    left: 240px;
-    top: -10px
-  }
-  .hero__title-colour {
-    padding-right: 0
-  }
-  .hero__title-right {
-    text-align: left
-  }
-  .hero__title--study img {
-    display: block;
-    left: 636px
-  }
-  .hero__bottom {
-    margin-top: 70px
-  }
-  .hero__bottom-content {
-    width: 500px;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0
-  }
-  .hero__bottom-img {
-    top: -90px
-  }
-  .hero__description {
-    max-width: 62%;
-    font-size: 16px
-  }
-  .hero__cite {
-    margin-top: 30px;
-    font-size: 20px;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1
-  }
-  .header--patients .hero__title {
-    font-size: 80px
-  }
-  .header--index .hero__inner {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column
-  }
-}
-@media screen and (max-width:991px) {
-  .header--patients .hero__title {
-    font-size: 60px
-  }
-  .hero__title {
-    font-size: 54px
-  }
-  .hero__title-logo {
-    left: 200px;
-    top: -20px
-  }
-  .hero__title--patients .hero__title-logo {
-    width: 80px;
-    display: block;
-    left: 370px;
-    top: -10px
-  }
-  .hero__title--study img {
-    display: block;
-    left: 565px;
-    width: 80px;
-    top: 0
-  }
-  .hero__bottom {
-    margin-top: 30px;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column
-  }
-  .hero__bottom-text {
-    max-width: 100%
-  }
-  .hero__bottom-content {
-    width: 100%;
-    max-width: 100%;
-    height: 160px
-  }
-  .hero__bottom-img {
-    width: 100%;
-    max-width: 400px;
-    top: -64px;
-    left: 26%
-  }
-  .hero__lead {
-    font-size: 16px
-  }
-  .hero__cite {
-    margin-top: 90px
-  }
-}
-@media screen and (max-width:767px) {
-  .hero__inner {
-    padding: 8px
-  }
-  .hero__title {
-    font-size: 48px
-  }
-  .hero__title-logo {
-    width: 80px;
-    left: 180px
-  }
-  .hero__title--patients .hero__title-logo {
-    width: 56px;
-    left: 296px;
-    top: 0
-  }
-  .hero__title--study .hero__title-pic {
-    display: block;
-    padding-right: 220px
-  }
-  .hero__title--study img {
-    left: 212px;
-    width: 60px;
-    top: -3px
-  }
-  .hero__cite {
-    font-size: 16px
-  }
-  .hero__bottom {
-    margin-top: 10px
-  }
-  .hero__bottom-text {
-    font-size: 16px
-  }
-  .hero__description {
-    max-width: 100%;
-    margin-top: 20px
-  }
-  .header--patients .hero__title {
-    font-size: 48px
-  }
-}
-@media screen and (max-width:600px) {
-  .header--study .hero__inner {
-    padding: 8px 4px
-  }
-  .hero__title {
-    font-size: 28px;
-    margin-bottom: 28px
-  }
-  .hero__title--study .hero__title-pic {
-    display: block;
-    padding-right: 60px;
-    word-spacing: 999px
-  }
-  .hero__title--study {
-    margin-bottom: 0;
-    font-size: 32px
-  }
-  .hero__title--study img {
-    left: 214px;
-    width: 56px;
-    top: auto;
-    bottom: 5px
-  }
-  .hero__title-logo {
-    width: 50px;
-    left: 97px;
-    top: -18px
-  }
-  .hero__title--patients .hero__title-logo {
-    left: 210px;
-    top: -10px
-  }
-  .header--patients .hero__title {
-    font-size: 34px
-  }
-  .hero__lead {
-    font-size: 14px
-  }
-  .hero__bottom {
-    margin-top: 16px
-  }
-  .hero__bottom-text {
-    font-size: 14px;
-    line-height: 158%
-  }
-  .hero__bottom-content {
-    margin-top: 22px;
-    height: 56px
-  }
-  .hero__bottom-img {
-    max-width: 340px;
-    top: -70px;
-    left: 14px
-  }
-  .hero__cite {
-    margin-top: 138px;
-    font-size: 14px;
-    line-height: 160%
-  }
-  .hero__description {
-    margin-top: 14px;
-    font-size: 14px
-  }
-}
-.header {
-  margin-bottom: 100px
-}
-.header--index {
-  margin-bottom: 35px
-}
-.header--study {
-  margin-bottom: 70px
-}
-.header--patients {
-  color: #fff
-}
-.header__inner {
-  min-height: 781px;
-  padding: 16px;
-  background: rgba(211,211,211,.5);
-  border-radius: var(--radius);
-  position: relative
-}
-.header__inner--fon {
-  background-image: url(../images/header/index-fon.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column
 }
 .header--index .header__inner {
   min-height: 662px
 }
-.header--patients .header__inner {
+.header--blue .header__inner {
+  padding-top: 115px;
   background: linear-gradient(#a7c3e7,#cae0fe,#d4e7ff,#b8d7ff)
 }
-.header__menu {
-  margin-bottom: 40px
+.header__title {
+  font-size: 84px;
+  line-height: 122%;
+  font-weight: 400
 }
-.header--patients .header__menu {
-  margin-bottom: 22px
+.header__title--large {
+  font-size: 120px
 }
-.header__natalya {
-  width: 414px;
-  position: absolute;
-  bottom: 0;
-  right: 58px;
+.header__title-lead__logo {
+  display: none
+}
+.header__title-pic {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
 }
-.header__natalya img {
+.header__title-logo {
+  margin-left: 19px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  top: -4px
+}
+.header__title-colour {
+  color: var(--accent)
+}
+.header--index .header__title-colour {
+  padding-right: 25px;
+  text-align: right
+}
+.header__cite {
+  max-width: 420px;
+  margin-top: -72px;
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 500
+}
+.header__bottom {
+  margin-top: 170px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.header__bottom-text {
+  max-width: 548px;
+  padding-right: 30px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
+}
+.header__bottom-text b {
+  color: var(--accent)
+}
+.header__bottom-glasses {
+  max-width: 640px;
+  position: relative;
+  top: 10px;
+  right: -6px;
+  height: 134px;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1
+}
+.header__bottom-glasses img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: -180px
+}
+.header__text {
+  max-width: 737px;
+  margin-top: 22px
+}
+.header--blue .header__text {
+  margin-top: 10px;
+  max-width: 585px
+}
+.header__images {
+  height: 310px;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1
+}
+.header__images-natalya {
   width: 414px;
-  height: auto
+  margin-left: auto;
+  position: relative;
+  bottom: -36px;
+  right: 23px
 }
-.header__logo {
-  width: 154px;
-  position: absolute;
-  z-index: 1;
-  bottom: 36px;
-  left: 36px;
-  transition: -webkit-transform .2s ease;
-  transition: transform .2s ease;
-  transition: transform .2s ease,-webkit-transform .2s ease
+.header__images-eye {
+  width: 590px;
+  margin-left: auto;
+  position: relative;
+  right: 44px;
+  top: 17px
 }
-.header__eye {
-  width: 585px;
-  position: absolute;
-  z-index: 1;
-  right: 77px;
-  bottom: 25px;
-  transition: opacity .2s ease
+@media screen and (max-width:1400px) {
+  .header__title {
+    font-size: 74px
+  }
+  .header--index .header__title-colour {
+    padding-right: 100px
+  }
 }
-.header__eye img {
-  width: 100%
+@media screen and (max-width:1320px) {
+  .header--study .header__main {
+    padding-right: 350px
+  }
+  .header__images-natalya {
+    width: 350px
+  }
 }
 @media screen and (max-width:1280px) {
-  .header {
-    margin-bottom: 62px
+  .header--blue {
+    margin-bottom: 70px
   }
-  .header--index {
-    margin-bottom: 42px
+  .header__title {
+    font-size: calc(.0456521739 * 100vw + 11.5652173913px)
   }
-  .header--study {
-    margin-bottom: 30px
+  .header--study .header__title {
+    font-size: calc(.0434782609 * 100vw + 14.347826087px)
   }
-  .header__natalya {
-    width: 340px
+  .header--index .header__title-colour {
+    padding-right: 0;
+    text-align: left
   }
-}
-@media screen and (max-width:1170px) {
-  .header__inner {
-    min-height: 750px
+  .header__bottom {
+    margin-top: 30px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start
   }
-  .header--index .header__inner {
-    min-height: 500px
+  .header__bottom-text {
+    max-width: 100%;
+    padding-right: 0
   }
-  .header__natalya {
-    width: 300px
+  .header__bottom-glasses {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    top: 0;
+    right: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
   }
-  .header__eye {
-    width: 460px;
-    right: 0
+  .header__bottom-glasses img {
+    position: relative;
+    top: 0;
+    left: auto
   }
-  .header--study .header__logo {
-    display: none
+  .header__cite {
+    margin-top: 20px;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1
+  }
+  .header--study .header__main {
+    padding-right: 0
+  }
+  .header__images {
+    height: auto
+  }
+  .header__images-natalya {
+    width: 250px
   }
 }
 @media screen and (max-width:991px) {
-  .header--study {
-    margin-bottom: 42px
+  .header__inner {
+    min-height: 600px
   }
-  .header--patients .header__menu {
-    margin-bottom: 44px
-  }
-  .header--patients .header__inner {
-    min-height: 700px
-  }
-  .header--patients .header__logo {
+  .header__title-logo {
     display: none
   }
-  .header__eye {
-    width: 360px;
-    opacity: 1
+  .header__title-lead__bottom {
+    display: block
+  }
+  .header__title-lead__top {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+  .header__title-lead__logo {
+    display: block;
+    margin-left: 20px;
+    width: 70px;
+    height: auto
+  }
+  .header__cite {
+    font-size: calc(.0158478605 * 100vw + 8.294770206px)
+  }
+  .header__images {
+    margin-top: 54px
+  }
+  .header--blue .header__images {
+    margin-top: 44px
+  }
+  .header__images-logo {
+    display: none
+  }
+  .header__images-natalya {
+    margin-right: auto;
+    right: auto
   }
 }
 @media screen and (max-width:767px) {
-  .header--study .header__inner {
-    padding-bottom: 460px
+  .header {
+    font-size: 16px
   }
-  .header--patients .header__inner {
-    min-height: 660px
+  .header--blue {
+    margin-bottom: 55px
   }
   .header__inner {
-    padding: 12px
+    padding: 20px;
+    padding-top: 117px
   }
-  .header__menu {
-    margin-bottom: 45px
+  .header__images-natalya {
+    bottom: -20px
   }
-  .header__natalya {
-    width: 280px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    right: auto
-  }
-  .header__logo {
-    width: 100px;
-    bottom: 360px
-  }
-  .header--patients .header__logo {
-    bottom: 36px
-  }
-}
-@media screen and (max-width:600px) {
-  .header__natalya {
-    width: 240px
+  .header__images-eye {
+    width: 100%;
+    max-width: 300px;
+    margin-right: auto;
+    right: auto;
+    left: auto;
+    top: 0
   }
 }
 @media screen and (max-width:560px) {
-  .header--patients .hero__lead {
-    max-width: 264px;
-    line-height: 156%
+  .header {
+    margin-bottom: 44px;
+    font-size: 14px;
+    line-height: 158%
   }
-  .header--study {
+  .header--blue {
+    margin-bottom: 65px
+  }
+  .header__inner {
+    padding-top: 110px
+  }
+  .header__bottom {
+    margin-top: 17px
+  }
+  .header__bottom-glasses {
+    height: auto;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+  }
+  .header__bottom-glasses img {
+    top: 6px;
+    left: 25px
+  }
+  .header__title {
+    line-height: 112%
+  }
+  .header__title--large {
+    font-size: 34px
+  }
+  .header__title-lead__logo {
+    width: 50px;
+    margin-left: 10px;
+    position: relative;
+    top: -10px
+  }
+  .header__cite {
+    margin-top: 0
+  }
+  .header--blue .header__text {
+    padding-right: 40px
+  }
+  .header__images-natalya {
+    height: 320px;
     overflow: hidden
   }
-  .header--study .header__inner {
-    padding-bottom: 390px
-  }
-  .header__eye {
-    width: 302px;
-    right: 10px;
-    bottom: 37px
-  }
-  .header__natalya {
-    bottom: -56px
+  .header__images-eye {
+    top: -20px
   }
 }
 .main {
@@ -3605,6 +3502,9 @@ input:checked ~ .form__agree-checkbox::after {
   .form__textarea {
     font-size: 12px
   }
+  .form__field {
+    min-height: 47px
+  }
   .form__textarea {
     min-height: 100px
   }
@@ -4310,7 +4210,7 @@ input:checked ~ .form__agree-checkbox::after {
   --faqItemPadding: 24px
 }
 .faq__inner {
-  padding: 50px 20px 70px
+  padding: 50px 20px 100px
 }
 .faq__item {
   margin-bottom: 16px;
@@ -4361,7 +4261,7 @@ input:checked ~ .form__agree-checkbox::after {
 }
 @media screen and (max-width:1170px) {
   .faq__inner {
-    padding: 20px;
+    padding: 50px 20px;
     padding-top: 14px
   }
   .faq__item {
@@ -4371,22 +4271,9 @@ input:checked ~ .form__agree-checkbox::after {
     font-size: 16px
   }
 }
-@media screen and (max-width:1170px) {
+@media screen and (max-width:767px) {
   .faq__inner {
     padding: 20px 16px
-  }
-}
-@media screen and (max-width:767px) {
-  .faq__btn::after {
-    font-size: 14px;
-    top: 12px;
-    -webkit-transform: none;
-    transform: none
-  }
-  .faq__btn.is-active::after {
-    -webkit-transform: rotate(45deg) translateY(0) translateX(-2px);
-    transform: rotate(45deg) translateY(0) translateX(-2px);
-    font-size: 16px
   }
 }
 @media screen and (max-width:560px) {
@@ -4403,11 +4290,23 @@ input:checked ~ .form__agree-checkbox::after {
     padding-right: 62px;
     line-height: 120%
   }
+  .faq__btn::after {
+    font-size: 14px;
+    top: 12px;
+    -webkit-transform: none;
+    transform: none
+  }
+  .faq__btn.is-active::after {
+    -webkit-transform: rotate(45deg) translateY(0) translateX(-2px);
+    transform: rotate(45deg) translateY(0) translateX(-2px);
+    font-size: 16px
+  }
   .faq__answer {
     padding: 0 12px 13px
   }
 }
 .section--faq {
+  margin-bottom: 0;
   background: var(--sectionBg)
 }
 .section--faq .section__header {
@@ -5011,6 +4910,69 @@ input:checked ~ .form__agree-checkbox::after {
     margin-bottom: 16px
   }
 }
+.gallery {
+  margin: 0 -20px;
+  overflow: hidden;
+  background: var(--sectionBg)
+}
+.gallery__list {
+  padding-top: 92px;
+  border-radius: 40px;
+  background: #fff
+}
+.gallery__list-column {
+  margin-bottom: 12px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.gallery__list-column:last-child {
+  margin-bottom: 0
+}
+.gallery__img {
+  border-radius: 32px;
+  margin: 0 6px;
+  width: auto;
+  height: 244px
+}
+@media screen and (max-width:1170px) {
+  .gallery__list {
+    padding-top: 50px
+  }
+}
+@media screen and (max-width:767px) {
+  .gallery {
+    margin: 0 -16px
+  }
+  .gallery__list {
+    padding-top: 44px
+  }
+  .gallery__img {
+    width: auto;
+    height: 180px
+  }
+}
+@media screen and (max-width:560px) {
+  .gallery__img {
+    height: 130px;
+    border-radius: 12px
+  }
+}
+@media screen and (max-width:400px) {
+  .gallery__img {
+    height: 91px;
+    margin: 0 3px
+  }
+  .gallery__list-column {
+    margin-bottom: 6px
+  }
+  .gallery__list-column:nth-child(2) {
+    margin-right: 40px
+  }
+}
 .modal {
   width: calc(100% - 40px);
   max-width: 1180px;
@@ -5158,8 +5120,11 @@ input:checked ~ .form__agree-checkbox::after {
   .modal {
     width: calc(100% - 32px)
   }
+  .modal__top {
+    margin-bottom: 20px
+  }
   .modal__inner {
-    padding: 50px 24px
+    padding: 40px 16px
   }
   .modal p {
     font-size: 14px

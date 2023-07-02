@@ -2318,6 +2318,9 @@ button.link:hover {
 .header__title--large {
   font-size: 120px
 }
+.header__title-lead {
+  display: block
+}
 .header__title-lead__logo {
   display: none
 }
@@ -2338,6 +2341,7 @@ button.link:hover {
   top: -4px
 }
 .header__title-colour {
+  display: block;
   color: var(--accent)
 }
 .header--index .header__title-colour {
@@ -3657,9 +3661,13 @@ input:checked ~ .form__agree-checkbox::after {
   position: relative;
   overflow: hidden
 }
+.services__btn {
+  display: block
+}
 .services__title {
   font-size: 24px;
-  font-weight: 500
+  font-weight: 500;
+  cursor: pointer
 }
 .services__info {
   height: 100%;
@@ -3697,6 +3705,9 @@ input:checked ~ .form__agree-checkbox::after {
   bottom: 0;
   -webkit-transform: translateX(50px);
   transform: translateX(50px)
+}
+.services__img--1 {
+  max-width: 200px
 }
 .services__img.animated {
   -webkit-transform: translateX(0);
@@ -4511,7 +4522,8 @@ input:checked ~ .form__agree-checkbox::after {
 }
 .videos__slide {
   border-radius: var(--radius);
-  overflow: hidden
+  overflow: hidden;
+  outline: 0
 }
 .videos__slide:focus .videos__preview,
 .videos__slide:hover .videos__preview {

@@ -9,9 +9,12 @@
       background: var(--sectionBg)
       position: relative
       overflow: hidden
+   &__btn
+      display: block
    &__title
       font-size: 24px
       font-weight: 500
+      cursor: pointer
    &__info
       height: 100%
       position: relative
@@ -34,6 +37,8 @@
       right: 0
       bottom: 0
       transform: translateX(50px)
+      &--1
+         max-width: 200px
       &.animated
          transform: translateX(0)
    &__description

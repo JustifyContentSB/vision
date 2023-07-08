@@ -63,7 +63,10 @@
 
    @media screen and (max-width: $width_md)
       &__top
-         padding-right: 100px
+         padding-right: 0
+      &__title,
+      &__desc
+         max-width: 280px
       &__pic
          width: 128px
       &__grid
@@ -78,8 +81,6 @@
          min-height: 240px
 
    @media screen and (max-width: $width_xs)
-      &__top
-         padding-right: 40px
       &__desc
          margin-bottom: 40px
       &__title
@@ -94,4 +95,13 @@
             height: 52px
       .btn
          padding: 20px
+
+   @media screen and (max-width: $width_mob)
+      &__desc
+         font-size: 14px
+      &__title
+         padding-right: 50px
+      &__title,
+      &__desc
+         max-width: 220px
       
